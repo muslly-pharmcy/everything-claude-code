@@ -27,3 +27,7 @@ private/
 
 # Session templates (not committed)
 examples/sessions/*.tmp
+
+# Local Graphify knowledge graphs and isolated Python environment
+graphify-out/
+.graphify-venv/
