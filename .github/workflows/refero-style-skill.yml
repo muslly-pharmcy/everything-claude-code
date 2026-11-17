@@ -1,0 +1,31 @@
+name: Refero catalogue skill verification
+on:
+  push:
+    paths:
+      - "skills/refero-style-reference/**"
+      - "tests/test_refero_skill.py"
+      - ".github/workflows/refero-style-skill.yml"
+  pull_request:
+    paths:
+      - "skills/refero-style-reference/**"
+      - "tests/test_refero_skill.py"
+      - ".github/workflows/refero-style-skill.yml"
+  schedule:
+    - cron: "20 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate snapshot (URLs and duplicates)
+        run: python3 skills/refero-style-reference/scripts/manage.py verify
+      - name: Run offline regression tests
+        run: python3 -m unittest discover -s tests -p "test_refero_skill.py" -v
+      - name: Smoke-test installer (no mutation)
+        run: python3 skills/refero-style-reference/scripts/manage.py install --agent all --scope project --project /tmp/refero-smoke --dry-run
