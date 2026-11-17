@@ -124,7 +124,7 @@ def refresh(args):
         merged.append({**old, **item})
     styles = sorted((x for x in merged if x["kind"] == "style"), key=lambda x: x["url"])
     guides = sorted((x for x in merged if x["kind"] != "style"), key=lambda x: x["url"])
-    if len(styles) < max(1, int(0.8 * len(old_styles))) and not args.allow_shrink:
+    if len(styles) * 5 < max(1, len(old_styles)) * 4 and not args.allow_shrink:
         raise ValueError("Refusing to shrink index by over 20%; inspect source or use --allow-shrink")
     print(f"Current {len(old_styles)} styles / {len(old_guides)} guides; "
           f"discovered {len(styles)} styles / {len(guides)} guides")
