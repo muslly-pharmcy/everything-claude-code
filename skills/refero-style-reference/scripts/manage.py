@@ -51,7 +51,8 @@ def normalized(entry):
     return item
 
 
-def load_catalog(folder=CATALOG):
+def load_catalog(folder=None):
+    folder = CATALOG if folder is None else folder
     styles, guides, seen = [], [], set()
     files = sorted(folder.glob("styles-*.jsonl"))
     if not files:
@@ -78,7 +79,8 @@ def load_catalog(folder=CATALOG):
     return styles, guides
 
 
-def verify(folder=CATALOG):
+def verify(folder=None):
+    folder = CATALOG if folder is None else folder
     styles, guides = load_catalog(folder)
     print(f"VERIFIED: {len(styles)} style links, {len(guides)} guide links, "
           f"{len(styles) + len(guides)} unique URLs; no full third-party texts.")
