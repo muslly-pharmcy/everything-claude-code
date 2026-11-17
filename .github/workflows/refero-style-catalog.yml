@@ -1,0 +1,60 @@
+name: Refero Style Catalogue
+on:
+  push:
+    paths:
+      - "scripts/refero_catalog.py"
+      - "tests/test_refero_catalog.py"
+      - "skills/refero-style-reference/**"
+      - ".github/workflows/refero-style-catalog.yml"
+  pull_request:
+    paths:
+      - "scripts/refero_catalog.py"
+      - "tests/test_refero_catalog.py"
+      - "skills/refero-style-reference/**"
+      - ".github/workflows/refero-style-catalog.yml"
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Offline unit tests
+        run: python -m unittest discover -s tests -p 'test_refero_catalog.py' -v
+      - name: Validate saved index
+        run: python scripts/refero_catalog.py validate
+  refresh:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Read public sitemaps only
+        run: python scripts/refero_catalog.py sync
+      - name: Propose catalogue update for review
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if git diff --quiet -- skills/refero-style-reference/catalog; then
+            echo "No index changes"; exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          branch="automation/refero-index-${GITHUB_RUN_ID}"
+          git switch -c "$branch"
+          git add skills/refero-style-reference/catalog
+          git commit -m "chore(refero): refresh public sitemap index"
+          git push --set-upstream origin "$branch"
+          gh pr create --base main --head "$branch" --draft --title "Review: refresh Refero public style index" --body "Automated sitemap-only index update. Verify missing/added URLs, licensing, and no private data before merging. No design code is deployed."
