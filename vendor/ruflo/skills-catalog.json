@@ -1,0 +1,4127 @@
+{
+  "schema": "ruflo-skill-catalog/v1",
+  "source": "https://github.com/ruvnet/ruflo",
+  "sourceCommit": "87f612cef121b50c2e31e2d3f88e46d88963a377",
+  "license": "MIT",
+  "sourceSkillFiles": 403,
+  "supportingFileCount": 16,
+  "advertisedSkills": 134,
+  "sourceTreeComplete": true,
+  "archiveMaterialized": false,
+  "disclaimer": "Registry of upstream content-hashes only. Not a security clearance or CLI/MCP installation. Skill instructions may request privileged operations.",
+  "groups": [
+    {
+      "title": "ADR",
+      "description": "Architecture Decision Records with lifecycle and dependency tracking",
+      "skills": [
+        "adr-create",
+        "adr-index",
+        "adr-reindex",
+        "adr-review",
+        "adr-verify"
+      ]
+    },
+    {
+      "title": "Agents",
+      "description": "Managed cloud agents, WASM sandboxed agents, and nested subagent trees",
+      "skills": [
+        "managed-agent",
+        "nested-subagents",
+        "wasm-agent",
+        "wasm-gallery"
+      ]
+    },
+    {
+      "title": "AgentDB",
+      "description": "Semantic routing, HNSW vector search, and hierarchical recall",
+      "skills": [
+        "agentdb-query",
+        "vector-search"
+      ]
+    },
+    {
+      "title": "AI Defense",
+      "description": "PII detection and prompt-injection scanning",
+      "skills": [
+        "pii-detect",
+        "safety-scan"
+      ]
+    },
+    {
+      "title": "Autopilot",
+      "description": "Autonomous task loops with learned-pattern prediction",
+      "skills": [
+        "autopilot-loop",
+        "autopilot-predict"
+      ]
+    },
+    {
+      "title": "Browser",
+      "description": "Session-recorded browser automation with RVF-backed replay",
+      "skills": [
+        "browser-auth-flow",
+        "browser-extract",
+        "browser-form-fill",
+        "browser-intent",
+        "browser-login",
+        "browser-record",
+        "browser-replay",
+        "browser-scrape",
+        "browser-screenshot-diff",
+        "browser-test"
+      ]
+    },
+    {
+      "title": "Business Pods",
+      "description": "Composable business-domain agent bundles",
+      "skills": [
+        "pod-sales"
+      ]
+    },
+    {
+      "title": "Core",
+      "description": "Project init, plugin discovery, doctor health checks, and witness signing",
+      "skills": [
+        "discover-plugins",
+        "init-project",
+        "ruflo-doctor",
+        "witness"
+      ]
+    },
+    {
+      "title": "Cost Tracker",
+      "description": "Session cost telemetry, budgets, anomaly detection, and burn tracking",
+      "skills": [
+        "cost-anomaly",
+        "cost-benchmark",
+        "cost-booster-edit",
+        "cost-booster-route",
+        "cost-budget-check",
+        "cost-burn",
+        "cost-compact-context",
+        "cost-conversation",
+        "cost-counterfactual",
+        "cost-diff",
+        "cost-export",
+        "cost-federation",
+        "cost-health",
+        "cost-optimize",
+        "cost-projection",
+        "cost-report",
+        "cost-session",
+        "cost-summary",
+        "cost-track",
+        "cost-trend"
+      ]
+    },
+    {
+      "title": "Dynamic Agent Architecture",
+      "description": "Cognitive-pattern agents that adapt across tasks",
+      "skills": [
+        "cognitive-pattern",
+        "daa-agent"
+      ]
+    },
+    {
+      "title": "Domain-Driven Design",
+      "description": "Bounded-context scaffolding and aggregate validation",
+      "skills": [
+        "ddd-aggregate",
+        "ddd-context",
+        "ddd-validate"
+      ]
+    },
+    {
+      "title": "Documentation",
+      "description": "API doc generation with drift detection",
+      "skills": [
+        "api-docs",
+        "doc-gen"
+      ]
+    },
+    {
+      "title": "Federation",
+      "description": "Cross-installation zero-trust agent federation",
+      "skills": [
+        "federation-audit",
+        "federation-init",
+        "federation-status"
+      ]
+    },
+    {
+      "title": "Goals",
+      "description": "Deep research, dossier collection, and goal-oriented action planning",
+      "skills": [
+        "deep-research",
+        "dossier-collect",
+        "goal-plan",
+        "horizon-track",
+        "research-synthesize"
+      ]
+    },
+    {
+      "title": "Intelligence",
+      "description": "Learned model routing, IPFS pattern transfer, neural training",
+      "skills": [
+        "intelligence-route",
+        "intelligence-transfer",
+        "neural-train"
+      ]
+    },
+    {
+      "title": "IoT (Cognitum)",
+      "description": "ESP32 device fleet management with anomaly detection",
+      "skills": [
+        "iot-anomalies",
+        "iot-firmware",
+        "iot-fleet",
+        "iot-register",
+        "iot-witness-verify"
+      ]
+    },
+    {
+      "title": "Git Analysis",
+      "description": "Diff risk analysis and PR-lifecycle git workflows",
+      "skills": [
+        "diff-analyze",
+        "git-workflow"
+      ]
+    },
+    {
+      "title": "Knowledge Graph",
+      "description": "Entity/relation extraction with pathfinder traversal",
+      "skills": [
+        "kg-extract",
+        "kg-traverse"
+      ]
+    },
+    {
+      "title": "Loop Workers",
+      "description": "Recurring background workers via cron and interval scheduling",
+      "skills": [
+        "cron-schedule",
+        "loop-worker"
+      ]
+    },
+    {
+      "title": "Market Data",
+      "description": "OHLCV ingest with HNSW-indexed candlestick pattern matching",
+      "skills": [
+        "market-ingest",
+        "market-pattern"
+      ]
+    },
+    {
+      "title": "MetaHarness",
+      "description": "Harness scoring, MCP security scanning, drift detection, and adversarial red/blue testing",
+      "skills": [
+        "harness-bench",
+        "harness-drift-from-history",
+        "harness-evolve",
+        "harness-genome",
+        "harness-gepa",
+        "harness-learn",
+        "harness-mcp-scan",
+        "harness-mint",
+        "harness-oia-audit",
+        "harness-score",
+        "harness-security-bench",
+        "harness-similarity",
+        "harness-threat-model"
+      ]
+    },
+    {
+      "title": "Database Migrations",
+      "description": "Sequential migration generation with validation",
+      "skills": [
+        "migrate-create",
+        "migrate-validate"
+      ]
+    },
+    {
+      "title": "Neural Trader",
+      "description": "LSTM/Transformer strategy backtesting and portfolio optimization",
+      "skills": [
+        "trader-backtest",
+        "trader-cloud-backtest",
+        "trader-explain",
+        "trader-portfolio",
+        "trader-portfolio-cg",
+        "trader-regime",
+        "trader-risk",
+        "trader-signal",
+        "trader-train"
+      ]
+    },
+    {
+      "title": "Observability",
+      "description": "Distributed tracing and metrics aggregation with anomaly detection",
+      "skills": [
+        "observe-metrics",
+        "observe-trace"
+      ]
+    },
+    {
+      "title": "Plugin Creator",
+      "description": "Scaffold and validate new Claude Code plugins",
+      "skills": [
+        "create-plugin",
+        "validate-plugin"
+      ]
+    },
+    {
+      "title": "RAG Memory",
+      "description": "Hybrid search, Graph RAG, MMR reranking, memory bridging",
+      "skills": [
+        "memory-bridge",
+        "memory-search"
+      ]
+    },
+    {
+      "title": "RuVector",
+      "description": "HNSW embeddings, RVF cognitive containers, GNN clustering",
+      "skills": [
+        "vector-cluster",
+        "vector-embed",
+        "vector-hyperbolic",
+        "vector-setup"
+      ]
+    },
+    {
+      "title": "RuVLLM",
+      "description": "Local inference with MicroLoRA fine-tuning and multi-provider routing",
+      "skills": [
+        "chat-format",
+        "llm-config"
+      ]
+    },
+    {
+      "title": "RVF",
+      "description": "Portable session persistence across conversations",
+      "skills": [
+        "rvf-manage",
+        "session-persist"
+      ]
+    },
+    {
+      "title": "Security Audit",
+      "description": "Codebase security scanning and CVE dependency checks",
+      "skills": [
+        "dependency-check",
+        "security-scan"
+      ]
+    },
+    {
+      "title": "SPARC",
+      "description": "Specification-Pseudocode-Architecture-Refinement-Completion methodology",
+      "skills": [
+        "sparc-implement",
+        "sparc-refine",
+        "sparc-spec"
+      ]
+    },
+    {
+      "title": "Swarm",
+      "description": "Multi-agent swarm initialization and live event monitoring",
+      "skills": [
+        "monitor-stream",
+        "swarm-init"
+      ]
+    },
+    {
+      "title": "Test Generation",
+      "description": "TDD London School test generation with coverage gap detection",
+      "skills": [
+        "tdd-repair",
+        "tdd-workflow",
+        "test-gaps"
+      ]
+    },
+    {
+      "title": "Workflows",
+      "description": "GAIA benchmark runs and native workflow orchestration",
+      "skills": [
+        "gaia-architecture-comparison",
+        "gaia-debugging",
+        "gaia-submission",
+        "workflow-create",
+        "workflow-run"
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": ".agents/skills/agent-adaptive-coordinator/SKILL.md",
+      "name": "agent-adaptive-coordinator",
+      "kind": "agent",
+      "blobSha": "2497fd483e967f838e58094d3d78b47454187773",
+      "bytes": 16064,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-agent/SKILL.md",
+      "name": "agent-agent",
+      "kind": "agent",
+      "blobSha": "1cd74b3bbf66466ea648f020a1fe4abfdc544edd",
+      "bytes": 25186,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-agentic-payments/SKILL.md",
+      "name": "agent-agentic-payments",
+      "kind": "agent",
+      "blobSha": "b20b7e114ec6b1cc7acd84c96649bba665d17bfe",
+      "bytes": 5282,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-analyze-code-quality/SKILL.md",
+      "name": "agent-analyze-code-quality",
+      "kind": "agent",
+      "blobSha": "88192851ca960cd826685d78fa3f732350f1ca50",
+      "bytes": 4726,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-app-store/SKILL.md",
+      "name": "agent-app-store",
+      "kind": "agent",
+      "blobSha": "4e2ddc0c5086a036c33bf72be66a9058ed1d9179",
+      "bytes": 4024,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-arch-system-design/SKILL.md",
+      "name": "agent-arch-system-design",
+      "kind": "agent",
+      "blobSha": "271835e96707e91c36ab57523e56e5bdd0dd229f",
+      "bytes": 4920,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-architecture/SKILL.md",
+      "name": "agent-architecture",
+      "kind": "agent",
+      "blobSha": "7e01a36a9af7f69247a801b6abefe809893843fa",
+      "bytes": 10994,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-authentication/SKILL.md",
+      "name": "agent-authentication",
+      "kind": "agent",
+      "blobSha": "3c2b8381f4eb854a46673fe35719098580ecd56e",
+      "bytes": 2841,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-automation-smart-agent/SKILL.md",
+      "name": "agent-automation-smart-agent",
+      "kind": "agent",
+      "blobSha": "a247cf3a4b83f11ccb6279b6376c2058fe34362d",
+      "bytes": 5475,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-base-template-generator/SKILL.md",
+      "name": "agent-base-template-generator",
+      "kind": "agent",
+      "blobSha": "1b29380e898c88b543beca20b14187cae03503d6",
+      "bytes": 3979,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-benchmark-suite/SKILL.md",
+      "name": "agent-benchmark-suite",
+      "kind": "agent",
+      "blobSha": "a1bb7784769e238d48a8b2fa40ef0cc62ce344a3",
+      "bytes": 19733,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-byzantine-coordinator/SKILL.md",
+      "name": "agent-byzantine-coordinator",
+      "kind": "agent",
+      "blobSha": "88c239de276f890936b1ddfacf7a767c4fb3eb0e",
+      "bytes": 2451,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-challenges/SKILL.md",
+      "name": "agent-challenges",
+      "kind": "agent",
+      "blobSha": "e963e957f25ac42e4045cb715727e093181bc981",
+      "bytes": 3977,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-code-analyzer/SKILL.md",
+      "name": "agent-code-analyzer",
+      "kind": "agent",
+      "blobSha": "1d3c7f37e4707ed0c0664d5d3d373a08bed79ff2",
+      "bytes": 5913,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-code-goal-planner/SKILL.md",
+      "name": "agent-code-goal-planner",
+      "kind": "agent",
+      "blobSha": "482fe32487d1b450619225b42fc681f954b9f035",
+      "bytes": 14320,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-code-review-swarm/SKILL.md",
+      "name": "agent-code-review-swarm",
+      "kind": "agent",
+      "blobSha": "af9ef4f16be1af62c8a772a643655facd9732002",
+      "bytes": 12191,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-coder/SKILL.md",
+      "name": "agent-coder",
+      "kind": "agent",
+      "blobSha": "6056c9fbc67f8d8ca30f5ab82220a410915849c3",
+      "bytes": 6591,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-collective-intelligence-coordinator/SKILL.md",
+      "name": "agent-collective-intelligence-coordinator",
+      "kind": "agent",
+      "blobSha": "093f835f2d53e731acdb5995130eeee895728e79",
+      "bytes": 4045,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-consensus-coordinator/SKILL.md",
+      "name": "agent-consensus-coordinator",
+      "kind": "agent",
+      "blobSha": "20625158fe38461a3dbed0f3fd4a41a7e86847bd",
+      "bytes": 12617,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-coordination/SKILL.md",
+      "name": "agent-coordination",
+      "kind": "agent",
+      "blobSha": "75184d08bbaf292dedfe8d71f7dee4e8f6e0ba87",
+      "bytes": 2074,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-coordinator-swarm-init/SKILL.md",
+      "name": "agent-coordinator-swarm-init",
+      "kind": "agent",
+      "blobSha": "45b62147d79d8ae8c36005acffe723c2681dae5c",
+      "bytes": 4005,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-crdt-synchronizer/SKILL.md",
+      "name": "agent-crdt-synchronizer",
+      "kind": "agent",
+      "blobSha": "c6f759f9261433e71cd3ce2835a9ca26fd09d03c",
+      "bytes": 25151,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-data-ml-model/SKILL.md",
+      "name": "agent-data-ml-model",
+      "kind": "agent",
+      "blobSha": "41bd23ea3088376391e38b7a01a9e384ef4b7e3e",
+      "bytes": 5292,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-dev-backend-api/SKILL.md",
+      "name": "agent-dev-backend-api",
+      "kind": "agent",
+      "blobSha": "401b4a06e98d66cdc38e39cc2fada5f132245954",
+      "bytes": 10240,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-docs-api-openapi/SKILL.md",
+      "name": "agent-docs-api-openapi",
+      "kind": "agent",
+      "blobSha": "f90c7cac67fc0b71faf56ed49e8aeb616f9acb03",
+      "bytes": 5065,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-github-modes/SKILL.md",
+      "name": "agent-github-modes",
+      "kind": "agent",
+      "blobSha": "2a736dcb61b8fffe8745146d4f2b86db5f3b2d91",
+      "bytes": 6790,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-github-pr-manager/SKILL.md",
+      "name": "agent-github-pr-manager",
+      "kind": "agent",
+      "blobSha": "1741ef5e523b6f574375530baefdb0cc32202f3d",
+      "bytes": 4626,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-goal-planner/SKILL.md",
+      "name": "agent-goal-planner",
+      "kind": "agent",
+      "blobSha": "7243c1085ccbe8929091735b34d2914fdb88ad57",
+      "bytes": 3367,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-gossip-coordinator/SKILL.md",
+      "name": "agent-gossip-coordinator",
+      "kind": "agent",
+      "blobSha": "0293fe2b2000d58805f57879debd3332fdff08e8",
+      "bytes": 2514,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-hierarchical-coordinator/SKILL.md",
+      "name": "agent-hierarchical-coordinator",
+      "kind": "agent",
+      "blobSha": "2031f300313f6632c29c0c76bf75bd75d6fe6318",
+      "bytes": 11156,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-implementer-sparc-coder/SKILL.md",
+      "name": "agent-implementer-sparc-coder",
+      "kind": "agent",
+      "blobSha": "b6bdf4f083202f7f02554f59b60c3011e5bc3515",
+      "bytes": 6654,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-issue-tracker/SKILL.md",
+      "name": "agent-issue-tracker",
+      "kind": "agent",
+      "blobSha": "c3dc5b08c21ff42e82fea02434aaa98bf83da619",
+      "bytes": 9493,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-load-balancer/SKILL.md",
+      "name": "agent-load-balancer",
+      "kind": "agent",
+      "blobSha": "c86d2206d9d8d045a0c7b59e3b3d9d29fc0f0734",
+      "bytes": 12358,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-matrix-optimizer/SKILL.md",
+      "name": "agent-matrix-optimizer",
+      "kind": "agent",
+      "blobSha": "af97f75bdfa88a2bcc330759534a08e9ad3fa271",
+      "bytes": 7150,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-memory-coordinator/SKILL.md",
+      "name": "agent-memory-coordinator",
+      "kind": "agent",
+      "blobSha": "848ddf790d23ca8a3f15b5b9801e05493bf05192",
+      "bytes": 4632,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-mesh-coordinator/SKILL.md",
+      "name": "agent-mesh-coordinator",
+      "kind": "agent",
+      "blobSha": "fe9b9de9fa991c4038bc0a7f59f070da78df58a6",
+      "bytes": 12983,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-migration-plan/SKILL.md",
+      "name": "agent-migration-plan",
+      "kind": "agent",
+      "blobSha": "519660caf052ec12c6ca9a4606cf65241fd72adc",
+      "bytes": 18429,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-multi-repo-swarm/SKILL.md",
+      "name": "agent-multi-repo-swarm",
+      "kind": "agent",
+      "blobSha": "9b9bfd44c5ab948c3fff68f2c76126ab6e68abce",
+      "bytes": 12870,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-neural-network/SKILL.md",
+      "name": "agent-neural-network",
+      "kind": "agent",
+      "blobSha": "64399770f5d96d86a6a7cd4113ef204b7e66621a",
+      "bytes": 3858,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-ops-cicd-github/SKILL.md",
+      "name": "agent-ops-cicd-github",
+      "kind": "agent",
+      "blobSha": "a79b706ece24b7d92948ad06756c83b89cf8d05f",
+      "bytes": 4592,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-orchestrator-task/SKILL.md",
+      "name": "agent-orchestrator-task",
+      "kind": "agent",
+      "blobSha": "4d2624a24b4cd9fc542fe6d2687213e65e0f0640",
+      "bytes": 4138,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-pagerank-analyzer/SKILL.md",
+      "name": "agent-pagerank-analyzer",
+      "kind": "agent",
+      "blobSha": "3fddf78fc7319cfa6bd69348aab704e7c970f65c",
+      "bytes": 11422,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-payments/SKILL.md",
+      "name": "agent-payments",
+      "kind": "agent",
+      "blobSha": "0dac4335111d58053a5a00bbe8ca3dfa53335436",
+      "bytes": 3837,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-performance-analyzer/SKILL.md",
+      "name": "agent-performance-analyzer",
+      "kind": "agent",
+      "blobSha": "9f09017e83d827adb5f7873a03ae4fb13261c46f",
+      "bytes": 5342,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-performance-benchmarker/SKILL.md",
+      "name": "agent-performance-benchmarker",
+      "kind": "agent",
+      "blobSha": "b2ed5be80e80fc1fce36c377af06551f886bcd57",
+      "bytes": 27370,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-performance-monitor/SKILL.md",
+      "name": "agent-performance-monitor",
+      "kind": "agent",
+      "blobSha": "cd0e3af656c76c6bc5367d7d35e1f8ced8fb067a",
+      "bytes": 19695,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-performance-optimizer/SKILL.md",
+      "name": "agent-performance-optimizer",
+      "kind": "agent",
+      "blobSha": "a220df56e98614375df68c3593bc8a2a816f5830",
+      "bytes": 14505,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-planner/SKILL.md",
+      "name": "agent-planner",
+      "kind": "agent",
+      "blobSha": "91b2e1da5f87d80924742efa629d861facad8ed3",
+      "bytes": 4697,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-pr-manager/SKILL.md",
+      "name": "agent-pr-manager",
+      "kind": "agent",
+      "blobSha": "70a5d0111ebd8da62cc8421bced85b60406f278b",
+      "bytes": 6233,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-production-validator/SKILL.md",
+      "name": "agent-production-validator",
+      "kind": "agent",
+      "blobSha": "fe19bbc47de333d240ed6499422fd5d891d48e89",
+      "bytes": 11872,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-project-board-sync/SKILL.md",
+      "name": "agent-project-board-sync",
+      "kind": "agent",
+      "blobSha": "14fd299501880725534efd480fb9ad618e406f68",
+      "bytes": 11495,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-pseudocode/SKILL.md",
+      "name": "agent-pseudocode",
+      "kind": "agent",
+      "blobSha": "3740580aedf1d771f52b587298129da1d0d8a43a",
+      "bytes": 8464,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-queen-coordinator/SKILL.md",
+      "name": "agent-queen-coordinator",
+      "kind": "agent",
+      "blobSha": "fc1681b3af7190efaa263916ebbb765a9796a302",
+      "bytes": 5257,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-quorum-manager/SKILL.md",
+      "name": "agent-quorum-manager",
+      "kind": "agent",
+      "blobSha": "2194e43ce3e4fb03c9250dfd8666092c81775f38",
+      "bytes": 28108,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-raft-manager/SKILL.md",
+      "name": "agent-raft-manager",
+      "kind": "agent",
+      "blobSha": "0cc3e1331ad2a00de5100aee4800b46c81df3b7f",
+      "bytes": 2388,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-refinement/SKILL.md",
+      "name": "agent-refinement",
+      "kind": "agent",
+      "blobSha": "2d558df8d4b5e70f5af55b04e6a0362dc900b037",
+      "bytes": 13869,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-release-manager/SKILL.md",
+      "name": "agent-release-manager",
+      "kind": "agent",
+      "blobSha": "18de00ce6cc30e4656ee5ce84de3a9e5bb7cd948",
+      "bytes": 12539,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-release-swarm/SKILL.md",
+      "name": "agent-release-swarm",
+      "kind": "agent",
+      "blobSha": "0d42ebba790b4bf1e299d45cdecd7dc93a65097a",
+      "bytes": 14027,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-repo-architect/SKILL.md",
+      "name": "agent-repo-architect",
+      "kind": "agent",
+      "blobSha": "c26c31dfeb2a1cea9a6fb56152fa517ca5daedbd",
+      "bytes": 12528,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-researcher/SKILL.md",
+      "name": "agent-researcher",
+      "kind": "agent",
+      "blobSha": "c51b51ba2d032c46ee28cad84ebdf36568e96c8c",
+      "bytes": 5481,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-resource-allocator/SKILL.md",
+      "name": "agent-resource-allocator",
+      "kind": "agent",
+      "blobSha": "e2a0982c8500090156e6c238977dfafc4f73ff98",
+      "bytes": 19517,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-reviewer/SKILL.md",
+      "name": "agent-reviewer",
+      "kind": "agent",
+      "blobSha": "850cc3704b061f07814eabc9edca2385f5e1ec5a",
+      "bytes": 7975,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-safla-neural/SKILL.md",
+      "name": "agent-safla-neural",
+      "kind": "agent",
+      "blobSha": "83d7964c6f5bc4f65cebedd30e70bdc1b7884c9b",
+      "bytes": 2884,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-sandbox/SKILL.md",
+      "name": "agent-sandbox",
+      "kind": "agent",
+      "blobSha": "742325f13297dc75b3187663a2a85e0a93e0813d",
+      "bytes": 3105,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-scout-explorer/SKILL.md",
+      "name": "agent-scout-explorer",
+      "kind": "agent",
+      "blobSha": "51ee6051afeafc366e44b1b6fa8f74561923acee",
+      "bytes": 6309,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-security-manager/SKILL.md",
+      "name": "agent-security-manager",
+      "kind": "agent",
+      "blobSha": "9f6df6e320bd120225f3bd6353211f5779a3fe0d",
+      "bytes": 19753,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-sona-learning-optimizer/SKILL.md",
+      "name": "agent-sona-learning-optimizer",
+      "kind": "agent",
+      "blobSha": "08f552f3a77372d9e69d4367244b0e069f58364e",
+      "bytes": 2063,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-sparc-coordinator/SKILL.md",
+      "name": "agent-sparc-coordinator",
+      "kind": "agent",
+      "blobSha": "e32942aff32192b1f1d640d669cc0ecb751991bf",
+      "bytes": 4767,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-spec-mobile-react-native/SKILL.md",
+      "name": "agent-spec-mobile-react-native",
+      "kind": "agent",
+      "blobSha": "a92af5359ccda9b6d226726c49924fdb8cec1918",
+      "bytes": 5683,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-specification/SKILL.md",
+      "name": "agent-specification",
+      "kind": "agent",
+      "blobSha": "bdd084d370b1724e6478c91a9e163e13059fef43",
+      "bytes": 7109,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-swarm-issue/SKILL.md",
+      "name": "agent-swarm-issue",
+      "kind": "agent",
+      "blobSha": "cf451b0730daf809c67b374ac5536a1bfb6185de",
+      "bytes": 14470,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-swarm-memory-manager/SKILL.md",
+      "name": "agent-swarm-memory-manager",
+      "kind": "agent",
+      "blobSha": "6162f2b9f37a8a63248eafc9077c9f265143a9b3",
+      "bytes": 4942,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-swarm-pr/SKILL.md",
+      "name": "agent-swarm-pr",
+      "kind": "agent",
+      "blobSha": "dc94e1af43a739e73030209fd3969100d0e4b14e",
+      "bytes": 11294,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-swarm/SKILL.md",
+      "name": "agent-swarm",
+      "kind": "agent",
+      "blobSha": "ab6427903da0bb4e9cf7a1521b812364f8bde6ca",
+      "bytes": 3562,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-sync-coordinator/SKILL.md",
+      "name": "agent-sync-coordinator",
+      "kind": "agent",
+      "blobSha": "edc0e9c986d4a4fc758c47278ee9e31b7b706d4f",
+      "bytes": 16301,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-tdd-london-swarm/SKILL.md",
+      "name": "agent-tdd-london-swarm",
+      "kind": "agent",
+      "blobSha": "dea50bcfc96dd5cb7073874b831e742cdbb14d47",
+      "bytes": 7138,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-test-long-runner/SKILL.md",
+      "name": "agent-test-long-runner",
+      "kind": "agent",
+      "blobSha": "0c5d9df56096b17f5b551a3142e6fca0dc4ad820",
+      "bytes": 1702,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-tester/SKILL.md",
+      "name": "agent-tester",
+      "kind": "agent",
+      "blobSha": "d789d6c194e4d53ca8eb703ef6025ac0cf594d42",
+      "bytes": 8580,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-topology-optimizer/SKILL.md",
+      "name": "agent-topology-optimizer",
+      "kind": "agent",
+      "blobSha": "1fcb1fc9c71ad993787d6d48ef72e3d868d69db2",
+      "bytes": 24668,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-trading-predictor/SKILL.md",
+      "name": "agent-trading-predictor",
+      "kind": "agent",
+      "blobSha": "dfc904d3b7d0bca718eda164e94c53cbc77f3948",
+      "bytes": 9815,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-user-tools/SKILL.md",
+      "name": "agent-user-tools",
+      "kind": "agent",
+      "blobSha": "fa61a394e38729a47d9e1eecfecfe46d1c63406b",
+      "bytes": 4370,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-v3-integration-architect/SKILL.md",
+      "name": "agent-v3-integration-architect",
+      "kind": "agent",
+      "blobSha": "9139489372ae7f53b276ce68f4eb483ea3eee26e",
+      "bytes": 11031,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-v3-memory-specialist/SKILL.md",
+      "name": "agent-v3-memory-specialist",
+      "kind": "agent",
+      "blobSha": "093b7023ce6a76f1187c9dc1a9f69c3107e02d5b",
+      "bytes": 9813,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-v3-performance-engineer/SKILL.md",
+      "name": "agent-v3-performance-engineer",
+      "kind": "agent",
+      "blobSha": "e19012f7a4786b423c00f6bfc4f4a118e08746d1",
+      "bytes": 13599,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-v3-queen-coordinator/SKILL.md",
+      "name": "agent-v3-queen-coordinator",
+      "kind": "agent",
+      "blobSha": "35ba6e5dfe267fbf4a8d4f8f18261f48b0149f69",
+      "bytes": 4032,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-v3-security-architect/SKILL.md",
+      "name": "agent-v3-security-architect",
+      "kind": "agent",
+      "blobSha": "a65a97d02084eda31896d637b9684257e10c0494",
+      "bytes": 6418,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-worker-specialist/SKILL.md",
+      "name": "agent-worker-specialist",
+      "kind": "agent",
+      "blobSha": "443ecc4e688926d592a7289f1c82d24f966a0cc1",
+      "bytes": 5437,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-workflow-automation/SKILL.md",
+      "name": "agent-workflow-automation",
+      "kind": "agent",
+      "blobSha": "ad42e7e59d24bcf3c071bbcefaafc84faa6aa018",
+      "bytes": 16027,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agent-workflow/SKILL.md",
+      "name": "agent-workflow",
+      "kind": "agent",
+      "blobSha": "9dcab815c21758e4d40ccacf5ac8b2185dac9044",
+      "bytes": 3790,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agentdb-advanced/SKILL.md",
+      "name": "agentdb-advanced",
+      "kind": "agent",
+      "blobSha": "298845ea470337ae4ff684adaceab33bc8d0e172",
+      "bytes": 13140,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agentdb-learning/SKILL.md",
+      "name": "agentdb-learning",
+      "kind": "agent",
+      "blobSha": "7864d784829a3cd8e33d1dc91810355889c9f8ad",
+      "bytes": 11916,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agentdb-memory-patterns/SKILL.md",
+      "name": "agentdb-memory-patterns",
+      "kind": "agent",
+      "blobSha": "d9b6d5520e3ce56410dc49792cd8e68f50d11b7b",
+      "bytes": 8692,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agentdb-optimization/SKILL.md",
+      "name": "agentdb-optimization",
+      "kind": "agent",
+      "blobSha": "103d2629e26b384fc1bbed11dee397e1fe643451",
+      "bytes": 12165,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agentdb-vector-search/SKILL.md",
+      "name": "agentdb-vector-search",
+      "kind": "agent",
+      "blobSha": "f664dd9be342e9900722019799d37bde52bb871c",
+      "bytes": 8963,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/agentic-jujutsu/SKILL.md",
+      "name": "agentic-jujutsu",
+      "kind": "agent",
+      "blobSha": "ad98fb6a1f06a329930b882d39324c2ccc16e7dd",
+      "bytes": 18848,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/claims/SKILL.md",
+      "name": "claims",
+      "kind": "agent",
+      "blobSha": "6220f4eddb2ed7dd59c61d35bed454affcf9ca5f",
+      "bytes": 4287,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/embeddings/SKILL.md",
+      "name": "embeddings",
+      "kind": "agent",
+      "blobSha": "f2790081842ee8a6ef33fc3496dc110427356183",
+      "bytes": 1817,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/flow-nexus-neural/SKILL.md",
+      "name": "flow-nexus-neural",
+      "kind": "agent",
+      "blobSha": "0e24797edd876b852f9adba0df90d1b42c1a241b",
+      "bytes": 16323,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/flow-nexus-platform/SKILL.md",
+      "name": "flow-nexus-platform",
+      "kind": "agent",
+      "blobSha": "8fb7b3b617052387d5e910cb702a73d431c8ac15",
+      "bytes": 25642,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/flow-nexus-swarm/SKILL.md",
+      "name": "flow-nexus-swarm",
+      "kind": "agent",
+      "blobSha": "fb498c51d8dfa881e52f0922d32c56117034c797",
+      "bytes": 16760,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/github-automation/SKILL.md",
+      "name": "github-automation",
+      "kind": "agent",
+      "blobSha": "78a5233385d791c541a746639f9cef34aa2f28f8",
+      "bytes": 1471,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/github-code-review/SKILL.md",
+      "name": "github-code-review",
+      "kind": "agent",
+      "blobSha": "27176d40adcb4a58a35520964c9159b9a5eac3f6",
+      "bytes": 26063,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/github-multi-repo/SKILL.md",
+      "name": "github-multi-repo",
+      "kind": "agent",
+      "blobSha": "73ff842fe05485c729c657e82c47f65765ee7e23",
+      "bytes": 22796,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/github-project-management/SKILL.md",
+      "name": "github-project-management",
+      "kind": "agent",
+      "blobSha": "a257d10709fd9254756e45c5d2b6709c5348aa68",
+      "bytes": 28418,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/github-release-management/SKILL.md",
+      "name": "github-release-management",
+      "kind": "agent",
+      "blobSha": "f2521974d175aba4f34beeb515d1ccf34068c5c2",
+      "bytes": 29673,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/github-workflow-automation/SKILL.md",
+      "name": "github-workflow-automation",
+      "kind": "agent",
+      "blobSha": "8e37004852c4b97b026cc223149c819848d1b75f",
+      "bytes": 23917,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/hive-mind-advanced/SKILL.md",
+      "name": "hive-mind-advanced",
+      "kind": "agent",
+      "blobSha": "46398764ca44a8b4e00a95242a8d9a8dd3592000",
+      "bytes": 16723,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/hive-mind/SKILL.md",
+      "name": "hive-mind",
+      "kind": "agent",
+      "blobSha": "f09252bb2299581eb9d1670bef4fdc9f7f61e233",
+      "bytes": 1868,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/hooks-automation/SKILL.md",
+      "name": "hooks-automation",
+      "kind": "agent",
+      "blobSha": "4498e181c45eeed5132f9ddb2d3346327f125152",
+      "bytes": 31351,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/memory-management/SKILL.md",
+      "name": "memory-management",
+      "kind": "agent",
+      "blobSha": "c337ff95e6e906f3c09dc2802bbfbbb485e6c278",
+      "bytes": 3318,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/neural-training/SKILL.md",
+      "name": "neural-training",
+      "kind": "agent",
+      "blobSha": "f37d90456a985a3eab47b6c234726c6226a44bd3",
+      "bytes": 1735,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/open-federation/SKILL.md",
+      "name": "open-federation",
+      "kind": "agent",
+      "blobSha": "cecd27c69ca36272cebef69014f53901e1bfb4ef",
+      "bytes": 6418,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/pair-programming/SKILL.md",
+      "name": "pair-programming",
+      "kind": "agent",
+      "blobSha": "8fa80d4ec7065bbae6931048a5860794c63ababa",
+      "bytes": 24862,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/performance-analysis/SKILL.md",
+      "name": "performance-analysis",
+      "kind": "agent",
+      "blobSha": "5963b57bb936e89140e1dce41fa232283e311b67",
+      "bytes": 14671,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/reasoningbank-agentdb/SKILL.md",
+      "name": "reasoningbank-agentdb",
+      "kind": "agent",
+      "blobSha": "d4abf656776454b0170b64240d1ab24b2a6c4000",
+      "bytes": 10930,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/reasoningbank-intelligence/SKILL.md",
+      "name": "reasoningbank-intelligence",
+      "kind": "agent",
+      "blobSha": "6048e2c81032007d09015a3548a452254d9b30c2",
+      "bytes": 4830,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/security-audit/SKILL.md",
+      "name": "security-audit",
+      "kind": "agent",
+      "blobSha": "83f7d64958f60edc175024ede5fa4d5bd13d6e29",
+      "bytes": 3291,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/skill-builder/SKILL.md",
+      "name": "skill-builder",
+      "kind": "agent",
+      "blobSha": "d510804bcd4ea2a1d4f91644fc3856400fffe9fd",
+      "bytes": 21901,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/sparc-methodology/SKILL.md",
+      "name": "sparc-methodology",
+      "kind": "agent",
+      "blobSha": "d48e6ef61b5e65a084d09ad0d71fb419a9753a05",
+      "bytes": 3315,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/stream-chain/SKILL.md",
+      "name": "stream-chain",
+      "kind": "agent",
+      "blobSha": "e360af98d8d7140d789902d0792e3e414911b321",
+      "bytes": 12708,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/swarm-advanced/SKILL.md",
+      "name": "swarm-advanced",
+      "kind": "agent",
+      "blobSha": "0aedfbaac1e54f470afb2d725ddb51811198a740",
+      "bytes": 23843,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/swarm-orchestration/SKILL.md",
+      "name": "swarm-orchestration",
+      "kind": "agent",
+      "blobSha": "1e2a9df73770e79e1af37c73afaa79b978764796",
+      "bytes": 3114,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/v3-cli-modernization/SKILL.md",
+      "name": "v3-cli-modernization",
+      "kind": "agent",
+      "blobSha": "f67343be9eb34c079291b570376e4bbd730f7675",
+      "bytes": 25724,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/v3-core-implementation/SKILL.md",
+      "name": "v3-core-implementation",
+      "kind": "agent",
+      "blobSha": "dda763dc59dffafb3432e5380457fb2e04bba4b8",
+      "bytes": 22019,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/v3-ddd-architecture/SKILL.md",
+      "name": "v3-ddd-architecture",
+      "kind": "agent",
+      "blobSha": "86b8ed7f53b1804fe6ceba19d94dab8d2c6bade6",
+      "bytes": 12166,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/v3-integration-deep/SKILL.md",
+      "name": "v3-integration-deep",
+      "kind": "agent",
+      "blobSha": "d7afaf403fae22577e9a08d9d6a0c3b9ed8c07c7",
+      "bytes": 7278,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/v3-mcp-optimization/SKILL.md",
+      "name": "v3-mcp-optimization",
+      "kind": "agent",
+      "blobSha": "496718aa01df8e0940312ec1340de5273f080fc4",
+      "bytes": 21428,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/v3-memory-unification/SKILL.md",
+      "name": "v3-memory-unification",
+      "kind": "agent",
+      "blobSha": "279dc63c44bbb5b88b8ba549fe97c1f93ff0e456",
+      "bytes": 5229,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/v3-performance-optimization/SKILL.md",
+      "name": "v3-performance-optimization",
+      "kind": "agent",
+      "blobSha": "8ae175ac80d31882c23b8a778ba17fcd695f3f2b",
+      "bytes": 11439,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/v3-security-overhaul/SKILL.md",
+      "name": "v3-security-overhaul",
+      "kind": "agent",
+      "blobSha": "e356d34d42bb85beffe8403be169f739f805aeda",
+      "bytes": 2440,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/v3-swarm-coordination/SKILL.md",
+      "name": "v3-swarm-coordination",
+      "kind": "agent",
+      "blobSha": "42c229d8fe1b82eb14ea1644b7b717ed42ee1662",
+      "bytes": 12137,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/verification-quality/SKILL.md",
+      "name": "verification-quality",
+      "kind": "agent",
+      "blobSha": "f65f90769405e0f4ac18b33b43ad00d1df40913d",
+      "bytes": 19781,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/worker-benchmarks/SKILL.md",
+      "name": "worker-benchmarks",
+      "kind": "agent",
+      "blobSha": "c6dabb337e227c70b1e586de0ed37097e9bf1fa8",
+      "bytes": 4251,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/worker-integration/SKILL.md",
+      "name": "worker-integration",
+      "kind": "agent",
+      "blobSha": "5ac32b487ab8f434529a87c61f80ea89369259b1",
+      "bytes": 3894,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/workflow-automation/SKILL.md",
+      "name": "workflow-automation",
+      "kind": "agent",
+      "blobSha": "e980b6573a709e429558731e2a457478ee9da920",
+      "bytes": 1760,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/agentdb-advanced/SKILL.md",
+      "name": "agentdb-advanced",
+      "kind": "claude",
+      "blobSha": "1caa8bc88bf02a40495b0fed404d6c7af1542d83",
+      "bytes": 13066,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/agentdb-learning/SKILL.md",
+      "name": "agentdb-learning",
+      "kind": "claude",
+      "blobSha": "e21b17ff2f4374b3dffe8fa04a7d2900d09f2937",
+      "bytes": 11906,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/agentdb-memory-patterns/SKILL.md",
+      "name": "agentdb-memory-patterns",
+      "kind": "claude",
+      "blobSha": "64d0ef99aa9da227f9b24c55f95e2fcd9ed3cbd8",
+      "bytes": 8690,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/agentdb-optimization/SKILL.md",
+      "name": "agentdb-optimization",
+      "kind": "claude",
+      "blobSha": "dd8ae59826312a11f8148782820a81ca0f436e5e",
+      "bytes": 12151,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/agentdb-vector-search/SKILL.md",
+      "name": "agentdb-vector-search",
+      "kind": "claude",
+      "blobSha": "fe0740e7572af7eb40ca239cdd1113192c6ec938",
+      "bytes": 8961,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/agentic-jujutsu/SKILL.md",
+      "name": "agentic-jujutsu",
+      "kind": "claude",
+      "blobSha": "447fee8a3d43741ac4173ff72588530a24b02ed1",
+      "bytes": 18837,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/browser/SKILL.md",
+      "name": "browser",
+      "kind": "claude",
+      "blobSha": "4f0b216e5a8fa928c23a41378da241f8da4a1703",
+      "bytes": 5286,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/flow-nexus-neural/SKILL.md",
+      "name": "flow-nexus-neural",
+      "kind": "claude",
+      "blobSha": "c76b6ca12cfc64872da0c239e8b48cd5b316bd57",
+      "bytes": 16126,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/flow-nexus-platform/SKILL.md",
+      "name": "flow-nexus-platform",
+      "kind": "claude",
+      "blobSha": "a1e43a6328c7bdb2e2bca9ae356d787a83c3d3e1",
+      "bytes": 25516,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/flow-nexus-swarm/SKILL.md",
+      "name": "flow-nexus-swarm",
+      "kind": "claude",
+      "blobSha": "f7b9b6ff64bee7393731bbc0349f23fa884fa395",
+      "bytes": 16557,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/github-code-review/SKILL.md",
+      "name": "github-code-review",
+      "kind": "claude",
+      "blobSha": "42ec8f2631521b091b69610d73f863a278c731ac",
+      "bytes": 25680,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/github-multi-repo/SKILL.md",
+      "name": "github-multi-repo",
+      "kind": "claude",
+      "blobSha": "9ab64819f2efce3343db151fb0fa84e699654453",
+      "bytes": 22386,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/github-project-management/SKILL.md",
+      "name": "github-project-management",
+      "kind": "claude",
+      "blobSha": "8e53128559247ba70eabf205b4eaaa362441928e",
+      "bytes": 29536,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/github-release-management/SKILL.md",
+      "name": "github-release-management",
+      "kind": "claude",
+      "blobSha": "cb1ad23145fe1ac46d115ca1b1067a483670f10c",
+      "bytes": 29140,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/github-workflow-automation/SKILL.md",
+      "name": "github-workflow-automation",
+      "kind": "claude",
+      "blobSha": "c1fdfface93b8821de1cb290f5821ae4c0f0cba0",
+      "bytes": 23619,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/hive-mind-advanced/SKILL.md",
+      "name": "hive-mind-advanced",
+      "kind": "claude",
+      "blobSha": "3b5a712e8d2b43ed9e50c5122438b46b6d0d0c43",
+      "bytes": 16562,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/hooks-automation/SKILL.md",
+      "name": "hooks-automation",
+      "kind": "claude",
+      "blobSha": "4804785bfdc89785c4a8da33320e42cc96081333",
+      "bytes": 30871,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/pair-programming/SKILL.md",
+      "name": "pair-programming",
+      "kind": "claude",
+      "blobSha": "ff377d077ce3e14d374c41c49118d47849f04ff7",
+      "bytes": 24862,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/performance-analysis/SKILL.md",
+      "name": "performance-analysis",
+      "kind": "claude",
+      "blobSha": "eafe9e8682eb0bac8c604c14e6b839ddf4142d86",
+      "bytes": 14538,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/reasoningbank-agentdb/SKILL.md",
+      "name": "reasoningbank-agentdb",
+      "kind": "claude",
+      "blobSha": "057ac09a6af1cfc89d861ffd845fdabdd206cc1a",
+      "bytes": 10923,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/reasoningbank-intelligence/SKILL.md",
+      "name": "reasoningbank-intelligence",
+      "kind": "claude",
+      "blobSha": "74930e73a4557043009178e6025fa11dd2407682",
+      "bytes": 4828,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/skill-builder/SKILL.md",
+      "name": "skill-builder",
+      "kind": "claude",
+      "blobSha": "62c3c9192847d51c7b3fbc6a0c13a754628f1195",
+      "bytes": 21899,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/sparc-methodology/SKILL.md",
+      "name": "sparc-methodology",
+      "kind": "claude",
+      "blobSha": "55f38d749c526fad0fb45bc8a7d2eca420f0c67a",
+      "bytes": 24956,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/stream-chain/SKILL.md",
+      "name": "stream-chain",
+      "kind": "claude",
+      "blobSha": "5ca1e610c79d7020b99502f57a17cb0ed40d1b5d",
+      "bytes": 12613,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/swarm-advanced/SKILL.md",
+      "name": "swarm-advanced",
+      "kind": "claude",
+      "blobSha": "e76ed8770f02c9ec1e85590dfb5d272bf3ef1033",
+      "bytes": 23700,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/swarm-orchestration/SKILL.md",
+      "name": "swarm-orchestration",
+      "kind": "claude",
+      "blobSha": "50d7fce3c901b2d2e73536985d9c3758501e67b9",
+      "bytes": 4308,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/v3-cli-modernization/SKILL.md",
+      "name": "v3-cli-modernization",
+      "kind": "claude",
+      "blobSha": "adf30ed62c385026228f8086a248175dd503c52d",
+      "bytes": 25722,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/v3-core-implementation/SKILL.md",
+      "name": "v3-core-implementation",
+      "kind": "claude",
+      "blobSha": "b1d2eda9f8e74af6fe03d8ee6ab396abd3aadbc5",
+      "bytes": 22017,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/v3-ddd-architecture/SKILL.md",
+      "name": "v3-ddd-architecture",
+      "kind": "claude",
+      "blobSha": "a2829891c1f3ac9a0f399847a07435789b98a43f",
+      "bytes": 12164,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/v3-integration-deep/SKILL.md",
+      "name": "v3-integration-deep",
+      "kind": "claude",
+      "blobSha": "1981bb8020bbbc1f32745a7a89844c77213fdbdb",
+      "bytes": 7276,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/v3-mcp-optimization/SKILL.md",
+      "name": "v3-mcp-optimization",
+      "kind": "claude",
+      "blobSha": "7450cbab380b07c7f94f18848df2603c57f4f3ab",
+      "bytes": 21426,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/v3-memory-unification/SKILL.md",
+      "name": "v3-memory-unification",
+      "kind": "claude",
+      "blobSha": "4e0d15e56d2ef8619f14724927d9f0bd79e49dd9",
+      "bytes": 5227,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/v3-performance-optimization/SKILL.md",
+      "name": "v3-performance-optimization",
+      "kind": "claude",
+      "blobSha": "6d71b0de4171e3afb12ae9b15dc32f483935fe01",
+      "bytes": 11437,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/v3-security-overhaul/SKILL.md",
+      "name": "v3-security-overhaul",
+      "kind": "claude",
+      "blobSha": "fe7c79d232b585791c80464176b6c346cc2d9f62",
+      "bytes": 2438,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/v3-swarm-coordination/SKILL.md",
+      "name": "v3-swarm-coordination",
+      "kind": "claude",
+      "blobSha": "aa9ec507ccfe2e023e008cf3b228858a9a775b18",
+      "bytes": 12135,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/verification-quality/SKILL.md",
+      "name": "verification-quality",
+      "kind": "claude",
+      "blobSha": "e8016df8f5e85c4ae58a3ab3b7f5a3c9e5cd6134",
+      "bytes": 20624,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/worker-benchmarks/SKILL.md",
+      "name": "worker-benchmarks",
+      "kind": "claude",
+      "blobSha": "7d8fa5be17fa895ec480a113f387d42517e0b3da",
+      "bytes": 4126,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".claude/skills/worker-integration/SKILL.md",
+      "name": "worker-integration",
+      "kind": "claude",
+      "blobSha": "ae7bc160c1b468e032b66d55eb4edc6509251370",
+      "bytes": 3762,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "SKILL.md",
+      "name": "ruflo",
+      "kind": "root",
+      "blobSha": "b41415aafb2ca8c073edad92b0bd4f46d231c9a4",
+      "bytes": 3939,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "chatgpt-plugin/skills/coordinate-ruflo-swarm/SKILL.md",
+      "name": "coordinate-ruflo-swarm",
+      "kind": "chatgpt",
+      "blobSha": "094ae3f87c362ef5fe333e6fa6fa07bc3e983083",
+      "bytes": 1455,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "chatgpt-plugin/skills/federation-audit/SKILL.md",
+      "name": "federation-audit",
+      "kind": "chatgpt",
+      "blobSha": "7ec9c00e3271f2ad2590ff620d2ee645c69d2e12",
+      "bytes": 1296,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "chatgpt-plugin/skills/federation-init/SKILL.md",
+      "name": "federation-init",
+      "kind": "chatgpt",
+      "blobSha": "795074790382899275fe1bb326e9a33cdf4369fd",
+      "bytes": 1294,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "chatgpt-plugin/skills/federation-status/SKILL.md",
+      "name": "federation-status",
+      "kind": "chatgpt",
+      "blobSha": "b1ddaf298ba84e800f7ae75964e46eac67a72e82",
+      "bytes": 1233,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "chatgpt-plugin/skills/publish-ruflo-update/SKILL.md",
+      "name": "publish-ruflo-update",
+      "kind": "chatgpt",
+      "blobSha": "e8a8ed01244d9a94fa4e17795335c741b152dd24",
+      "bytes": 1360,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "chatgpt-plugin/skills/triage-ruflo-work/SKILL.md",
+      "name": "triage-ruflo-work",
+      "kind": "chatgpt",
+      "blobSha": "f3610de558a5f1638f22a46b6431bcdcfd2caf02",
+      "bytes": 1238,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-adr/skills/adr-create/SKILL.md",
+      "name": "adr-create",
+      "kind": "plugin",
+      "blobSha": "bc851af5e96b2ab748343ab4a7996398b0a836b4",
+      "bytes": 2720,
+      "mode": "100644",
+      "advertised_group": "ADR"
+    },
+    {
+      "path": "plugins/ruflo-adr/skills/adr-index/SKILL.md",
+      "name": "adr-index",
+      "kind": "plugin",
+      "blobSha": "ed970e1830fd43c28e3ae33497b2c0367860b3ce",
+      "bytes": 3464,
+      "mode": "100644",
+      "advertised_group": "ADR"
+    },
+    {
+      "path": "plugins/ruflo-adr/skills/adr-reindex/SKILL.md",
+      "name": "adr-reindex",
+      "kind": "plugin",
+      "blobSha": "949095706f811415b86771629c94050c5d09af47",
+      "bytes": 4626,
+      "mode": "100644",
+      "advertised_group": "ADR"
+    },
+    {
+      "path": "plugins/ruflo-adr/skills/adr-review/SKILL.md",
+      "name": "adr-review",
+      "kind": "plugin",
+      "blobSha": "81972c908176a94802777a3a57706d18b75d987c",
+      "bytes": 2659,
+      "mode": "100644",
+      "advertised_group": "ADR"
+    },
+    {
+      "path": "plugins/ruflo-adr/skills/adr-verify/SKILL.md",
+      "name": "adr-verify",
+      "kind": "plugin",
+      "blobSha": "810ef3c4f1ac46ed488fcc5382e2e5a129b29a86",
+      "bytes": 2014,
+      "mode": "100644",
+      "advertised_group": "ADR"
+    },
+    {
+      "path": "plugins/ruflo-agent/skills/managed-agent/SKILL.md",
+      "name": "managed-agent",
+      "kind": "plugin",
+      "blobSha": "2175b7ab78b886d68926a4778ed4fa1aaba5c5e7",
+      "bytes": 8422,
+      "mode": "100644",
+      "advertised_group": "Agents"
+    },
+    {
+      "path": "plugins/ruflo-agent/skills/managed-workflow/SKILL.md",
+      "name": "managed-workflow",
+      "kind": "plugin",
+      "blobSha": "ef88e9524e98be5353c63465b465fb616c8fe4f5",
+      "bytes": 5232,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-agent/skills/nested-subagents/SKILL.md",
+      "name": "nested-subagents",
+      "kind": "plugin",
+      "blobSha": "1dde618541446060aba56a38537518a7996150c9",
+      "bytes": 4162,
+      "mode": "100644",
+      "advertised_group": "Agents"
+    },
+    {
+      "path": "plugins/ruflo-agent/skills/wasm-agent/SKILL.md",
+      "name": "wasm-agent",
+      "kind": "plugin",
+      "blobSha": "f5d928c31e39c0afb7f89c0b0c724854a2d78400",
+      "bytes": 1764,
+      "mode": "100644",
+      "advertised_group": "Agents"
+    },
+    {
+      "path": "plugins/ruflo-agent/skills/wasm-gallery/SKILL.md",
+      "name": "wasm-gallery",
+      "kind": "plugin",
+      "blobSha": "79a032fcb984b3810cf69bc78c9ca11729f4b188",
+      "bytes": 1128,
+      "mode": "100644",
+      "advertised_group": "Agents"
+    },
+    {
+      "path": "plugins/ruflo-agentdb/skills/agentdb-query/SKILL.md",
+      "name": "agentdb-query",
+      "kind": "plugin",
+      "blobSha": "d16fac2500e81ff2892c7b77ef6691ba83b12b48",
+      "bytes": 4767,
+      "mode": "100644",
+      "advertised_group": "AgentDB"
+    },
+    {
+      "path": "plugins/ruflo-agentdb/skills/vector-search/SKILL.md",
+      "name": "vector-search",
+      "kind": "plugin",
+      "blobSha": "4d1dcaf6e26c8945e631af8f95ac34a9d77b202a",
+      "bytes": 6138,
+      "mode": "100644",
+      "advertised_group": "AgentDB"
+    },
+    {
+      "path": "plugins/ruflo-agntcy/skills/agntcy-status/SKILL.md",
+      "name": "agntcy-status",
+      "kind": "plugin",
+      "blobSha": "41630be7e506196f75b78c578722eb8ae04e380d",
+      "bytes": 2211,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-ai-team/directory/skills/coordinate-team-work/SKILL.md",
+      "name": "coordinate-team-work",
+      "kind": "plugin",
+      "blobSha": "bb3b3d0e4f3c9c8b94d623a1c95f81a30bc255e5",
+      "bytes": 1096,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-ai-team/directory/skills/launch-ai-team/SKILL.md",
+      "name": "launch-ai-team",
+      "kind": "plugin",
+      "blobSha": "7d7344ff5c1c8241b9a2d85edbd0362c5f29dfe2",
+      "bytes": 1500,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-ai-team/directory/skills/manage-team-lifecycle/SKILL.md",
+      "name": "manage-team-lifecycle",
+      "kind": "plugin",
+      "blobSha": "33c02f3838ce9da632d28720688e604fbb1175b2",
+      "bytes": 1035,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-ai-team/directory/skills/monitor-ai-team/SKILL.md",
+      "name": "monitor-ai-team",
+      "kind": "plugin",
+      "blobSha": "cffab1de2cb061758d578d42c0b1c1c7faa58d4b",
+      "bytes": 1036,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-ai-team/directory/skills/remember-team-context/SKILL.md",
+      "name": "remember-team-context",
+      "kind": "plugin",
+      "blobSha": "df5c152f4e98660b1342d9878a856bf5961a3557",
+      "bytes": 1183,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-ai-team/directory/skills/review-team-deliverables/SKILL.md",
+      "name": "review-team-deliverables",
+      "kind": "plugin",
+      "blobSha": "25a3e16df8733c951617c05b81a873b0bee40620",
+      "bytes": 1013,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-ai-team/skills/coordinate-team-work/SKILL.md",
+      "name": "coordinate-team-work",
+      "kind": "plugin",
+      "blobSha": "bb3b3d0e4f3c9c8b94d623a1c95f81a30bc255e5",
+      "bytes": 1096,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-ai-team/skills/launch-ai-team/SKILL.md",
+      "name": "launch-ai-team",
+      "kind": "plugin",
+      "blobSha": "7d7344ff5c1c8241b9a2d85edbd0362c5f29dfe2",
+      "bytes": 1500,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-ai-team/skills/manage-team-lifecycle/SKILL.md",
+      "name": "manage-team-lifecycle",
+      "kind": "plugin",
+      "blobSha": "33c02f3838ce9da632d28720688e604fbb1175b2",
+      "bytes": 1035,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-ai-team/skills/monitor-ai-team/SKILL.md",
+      "name": "monitor-ai-team",
+      "kind": "plugin",
+      "blobSha": "cffab1de2cb061758d578d42c0b1c1c7faa58d4b",
+      "bytes": 1036,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-ai-team/skills/remember-team-context/SKILL.md",
+      "name": "remember-team-context",
+      "kind": "plugin",
+      "blobSha": "df5c152f4e98660b1342d9878a856bf5961a3557",
+      "bytes": 1183,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-ai-team/skills/review-team-deliverables/SKILL.md",
+      "name": "review-team-deliverables",
+      "kind": "plugin",
+      "blobSha": "25a3e16df8733c951617c05b81a873b0bee40620",
+      "bytes": 1013,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-aidefence/skills/pii-detect/SKILL.md",
+      "name": "pii-detect",
+      "kind": "plugin",
+      "blobSha": "a25f610eee84b204d61c96f0cf462fde52eb7103",
+      "bytes": 1406,
+      "mode": "100644",
+      "advertised_group": "AI Defense"
+    },
+    {
+      "path": "plugins/ruflo-aidefence/skills/safety-scan/SKILL.md",
+      "name": "safety-scan",
+      "kind": "plugin",
+      "blobSha": "0edbe2f1202ba5bfbcca773c0885416cc7ab0b78",
+      "bytes": 1643,
+      "mode": "100644",
+      "advertised_group": "AI Defense"
+    },
+    {
+      "path": "plugins/ruflo-autopilot/skills/autopilot-loop/SKILL.md",
+      "name": "autopilot-loop",
+      "kind": "plugin",
+      "blobSha": "b0c158af3c8a5a56f84cacd85c0c3895c4b6bf8f",
+      "bytes": 1423,
+      "mode": "100644",
+      "advertised_group": "Autopilot"
+    },
+    {
+      "path": "plugins/ruflo-autopilot/skills/autopilot-predict/SKILL.md",
+      "name": "autopilot-predict",
+      "kind": "plugin",
+      "blobSha": "e4520d52ca1cff80c28a03db71ef960542dfe55c",
+      "bytes": 1348,
+      "mode": "100644",
+      "advertised_group": "Autopilot"
+    },
+    {
+      "path": "plugins/ruflo-bbs-federation/skills/cross-host-federation/SKILL.md",
+      "name": "cross-host-federation",
+      "kind": "plugin",
+      "blobSha": "bf177f8faf0505aa45bb5d579f66eddfd86bf21f",
+      "bytes": 4176,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-browser/skills/browser-auth-flow/SKILL.md",
+      "name": "browser-auth-flow",
+      "kind": "plugin",
+      "blobSha": "1874755bd48ee904191040ade038b3d46dbaff1a",
+      "bytes": 3809,
+      "mode": "100644",
+      "advertised_group": "Browser"
+    },
+    {
+      "path": "plugins/ruflo-browser/skills/browser-extract/SKILL.md",
+      "name": "browser-extract",
+      "kind": "plugin",
+      "blobSha": "35a22498c01293ce94935da271377f3308cddda6",
+      "bytes": 3587,
+      "mode": "100644",
+      "advertised_group": "Browser"
+    },
+    {
+      "path": "plugins/ruflo-browser/skills/browser-form-fill/SKILL.md",
+      "name": "browser-form-fill",
+      "kind": "plugin",
+      "blobSha": "2d2bbef1cfce9d09a60671088057f79cbbe7ed71",
+      "bytes": 2999,
+      "mode": "100644",
+      "advertised_group": "Browser"
+    },
+    {
+      "path": "plugins/ruflo-browser/skills/browser-intent/SKILL.md",
+      "name": "browser-intent",
+      "kind": "plugin",
+      "blobSha": "a85120006b01eea74e6e972e116d57d81cc130be",
+      "bytes": 4813,
+      "mode": "100644",
+      "advertised_group": "Browser"
+    },
+    {
+      "path": "plugins/ruflo-browser/skills/browser-login/SKILL.md",
+      "name": "browser-login",
+      "kind": "plugin",
+      "blobSha": "c75c2cdb7594e38b63fdf4f47c9f1bb52d62d4e8",
+      "bytes": 3784,
+      "mode": "100644",
+      "advertised_group": "Browser"
+    },
+    {
+      "path": "plugins/ruflo-browser/skills/browser-record/SKILL.md",
+      "name": "browser-record",
+      "kind": "plugin",
+      "blobSha": "5fdfb3eecf0435c019cd65860da4c8b08c62f80a",
+      "bytes": 2913,
+      "mode": "100644",
+      "advertised_group": "Browser"
+    },
+    {
+      "path": "plugins/ruflo-browser/skills/browser-replay/SKILL.md",
+      "name": "browser-replay",
+      "kind": "plugin",
+      "blobSha": "df4821cfb34bd0b979ca7dfd221f68a501cf5e90",
+      "bytes": 3429,
+      "mode": "100644",
+      "advertised_group": "Browser"
+    },
+    {
+      "path": "plugins/ruflo-browser/skills/browser-scrape/SKILL.md",
+      "name": "browser-scrape",
+      "kind": "plugin",
+      "blobSha": "78d8c0112f67d1f4f8bc8d8644f3869c74f95736",
+      "bytes": 1714,
+      "mode": "100644",
+      "advertised_group": "Browser"
+    },
+    {
+      "path": "plugins/ruflo-browser/skills/browser-screenshot-diff/SKILL.md",
+      "name": "browser-screenshot-diff",
+      "kind": "plugin",
+      "blobSha": "3d261679f7c32283bd21ff5947d105513185298f",
+      "bytes": 2493,
+      "mode": "100644",
+      "advertised_group": "Browser"
+    },
+    {
+      "path": "plugins/ruflo-browser/skills/browser-test/SKILL.md",
+      "name": "browser-test",
+      "kind": "plugin",
+      "blobSha": "75be24ae179e06741bd595fa383e9abc3ff9098f",
+      "bytes": 3632,
+      "mode": "100644",
+      "advertised_group": "Browser"
+    },
+    {
+      "path": "plugins/ruflo-business-pods/skills/pod-sales/SKILL.md",
+      "name": "pod-sales",
+      "kind": "plugin",
+      "blobSha": "06d9c640c2a56c59bd4cec433c57974e9ac0c6db",
+      "bytes": 2784,
+      "mode": "100644",
+      "advertised_group": "Business Pods"
+    },
+    {
+      "path": "plugins/ruflo-console/skills/generate-console-theme/SKILL.md",
+      "name": "generate-console-theme",
+      "kind": "plugin",
+      "blobSha": "66361efbdc70afa7bd2238821c98a86fceffdb23",
+      "bytes": 2006,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-core/skills/discover-plugins/SKILL.md",
+      "name": "discover-plugins",
+      "kind": "plugin",
+      "blobSha": "14b970ede8e7d3513ba2219484ad6ade0d21ae90",
+      "bytes": 8268,
+      "mode": "100644",
+      "advertised_group": "Core"
+    },
+    {
+      "path": "plugins/ruflo-core/skills/init-project/SKILL.md",
+      "name": "init-project",
+      "kind": "plugin",
+      "blobSha": "cc56ccfba2565c772c593f72ee61fac154c20f70",
+      "bytes": 702,
+      "mode": "100644",
+      "advertised_group": "Core"
+    },
+    {
+      "path": "plugins/ruflo-core/skills/ruflo-doctor/SKILL.md",
+      "name": "ruflo-doctor",
+      "kind": "plugin",
+      "blobSha": "1db4ca3ee6b02e03f61585dd295cf309457f1915",
+      "bytes": 562,
+      "mode": "100644",
+      "advertised_group": "Core"
+    },
+    {
+      "path": "plugins/ruflo-core/skills/ruflo-status/SKILL.md",
+      "name": "ruflo-status",
+      "kind": "plugin",
+      "blobSha": "4f7c05c0b9a6f6d26c25a3c2e36017f23483468d",
+      "bytes": 1026,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-core/skills/witness/SKILL.md",
+      "name": "witness",
+      "kind": "plugin",
+      "blobSha": "9c848b3c36f9fb8bec8c3ef778eebf822c24d020",
+      "bytes": 5287,
+      "mode": "100644",
+      "advertised_group": "Core"
+    },
+    {
+      "path": "plugins/ruflo-cost-tracker/skills/cost-advise/SKILL.md",
+      "name": "cost-advise",
+      "kind": "plugin",
+      "blobSha": "a7d24d524fe3731e0da8057aa41da92925260262",
+      "bytes": 1173,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-cost-tracker/skills/cost-anomaly/SKILL.md",
+      "name": "cost-anomaly",
+      "kind": "plugin",
+      "blobSha": "cb09143e50679a6656dea1740011b05d1d2519da",
+      "bytes": 3724,
+      "mode": "100644",
+      "advertised_group": "Cost Tracker"
+    },
+    {
+      "path": "plugins/ruflo-cost-tracker/skills/cost-benchmark/SKILL.md",
+      "name": "cost-benchmark",
+      "kind": "plugin",
+      "blobSha": "107c2e6f008cdbbb2dd1cbab06b9a191e20a0e11",
+      "bytes": 3037,
+      "mode": "100644",
+      "advertised_group": "Cost Tracker"
+    },
+    {
+      "path": "plugins/ruflo-cost-tracker/skills/cost-booster-edit/SKILL.md",
+      "name": "cost-booster-edit",
+      "kind": "plugin",
+      "blobSha": "cbe3a6afe4f09084fa360894a03e5287695480e7",
+      "bytes": 5804,
+      "mode": "100644",
+      "advertised_group": "Cost Tracker"
+    },
+    {
+      "path": "plugins/ruflo-cost-tracker/skills/cost-booster-route/SKILL.md",
+      "name": "cost-booster-route",
+      "kind": "plugin",
+      "blobSha": "485be3f070b42919a02898dce3626ee81cd22802",
+      "bytes": 2749,
+      "mode": "100644",
+      "advertised_group": "Cost Tracker"
+    },
+    {
+      "path": "plugins/ruflo-cost-tracker/skills/cost-budget-check/SKILL.md",
+      "name": "cost-budget-check",
+      "kind": "plugin",
+      "blobSha": "0ad55f0c06ec15491916c17d528a73ba55e5d5e4",
+      "bytes": 2619,
+      "mode": "100644",
+      "advertised_group": "Cost Tracker"
+    },
+    {
+      "path": "plugins/ruflo-cost-tracker/skills/cost-burn/SKILL.md",
+      "name": "cost-burn",
+      "kind": "plugin",
+      "blobSha": "4b2e8879c116bf242c43cc5ca46c3cf9906d690b",
+      "bytes": 3346,
+      "mode": "100644",
+      "advertised_group": "Cost Tracker"
+    },
+    {
+      "path": "plugins/ruflo-cost-tracker/skills/cost-compact-context/SKILL.md",
+      "name": "cost-compact-context",
+      "kind": "plugin",
+      "blobSha": "d07af87cb64f4cb069f25b40a8b70e3afdec8cba",
+      "bytes": 2658,
+      "mode": "100644",
+      "advertised_group": "Cost Tracker"
+    },
+    {
+      "path": "plugins/ruflo-cost-tracker/skills/cost-conversation/SKILL.md",
+      "name": "cost-conversation",
+      "kind": "plugin",
+      "blobSha": "34ffad0efa56ee4073e71cf412ede335c9d8d1a0",
+      "bytes": 1678,
+      "mode": "100644",
+      "advertised_group": "Cost Tracker"
+    },
+    {
+      "path": "plugins/ruflo-cost-tracker/skills/cost-counterfactual/SKILL.md",
+      "name": "cost-counterfactual",
+      "kind": "plugin",
+      "blobSha": "926f614e60502ebd692cd317b614ea185bb20671",
+      "bytes": 3199,
+      "mode": "100644",
+      "advertised_group": "Cost Tracker"
+    },
+    {
+      "path": "plugins/ruflo-cost-tracker/skills/cost-diff/SKILL.md",
+      "name": "cost-diff",
+      "kind": "plugin",
+      "blobSha": "d954c60e89da8880a91adf8ab3553bee3c15b194",
+      "bytes": 5060,
+      "mode": "100644",
+      "advertised_group": "Cost Tracker"
+    },
+    {
+      "path": "plugins/ruflo-cost-tracker/skills/cost-export/SKILL.md",
+      "name": "cost-export",
+      "kind": "plugin",
+      "blobSha": "3f70c325d992d0daf160a801ff3968d6a0529565",
+      "bytes": 2793,
+      "mode": "100644",
+      "advertised_group": "Cost Tracker"
+    },
+    {
+      "path": "plugins/ruflo-cost-tracker/skills/cost-federation/SKILL.md",
+      "name": "cost-federation",
+      "kind": "plugin",
+      "blobSha": "4f92936a585312b2d582648d1ec13fbbd246025a",
+      "bytes": 2404,
+      "mode": "100644",
+      "advertised_group": "Cost Tracker"
+    },
+    {
+      "path": "plugins/ruflo-cost-tracker/skills/cost-health/SKILL.md",
+      "name": "cost-health",
+      "kind": "plugin",
+      "blobSha": "ccc788a4f81a7031279fd27a0e608cf2b149a33f",
+      "bytes": 3678,
+      "mode": "100644",
+      "advertised_group": "Cost Tracker"
+    },
+    {
+      "path": "plugins/ruflo-cost-tracker/skills/cost-ledger/SKILL.md",
+      "name": "cost-ledger",
+      "kind": "plugin",
+      "blobSha": "5cb08adf5f07fc3c1d2de8da9a36ede4a4dd54ef",
+      "bytes": 1982,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-cost-tracker/skills/cost-local/SKILL.md",
+      "name": "cost-local",
+      "kind": "plugin",
+      "blobSha": "65f29da6ecdfdbbc31a683292e60439a48d5dc58",
+      "bytes": 1343,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-cost-tracker/skills/cost-openrouter/SKILL.md",
+      "name": "cost-openrouter",
+      "kind": "plugin",
+      "blobSha": "8de1434cd9302848fd0267eb1784f140bcad2670",
+      "bytes": 1564,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-cost-tracker/skills/cost-optimize/SKILL.md",
+      "name": "cost-optimize",
+      "kind": "plugin",
+      "blobSha": "983ea3bd1690f9ab5e0fe3c2c40853c01d4f3e0e",
+      "bytes": 4002,
+      "mode": "100644",
+      "advertised_group": "Cost Tracker"
+    },
+    {
+      "path": "plugins/ruflo-cost-tracker/skills/cost-projection/SKILL.md",
+      "name": "cost-projection",
+      "kind": "plugin",
+      "blobSha": "9960a70bea9aaacbba3ceee1dde7d994cd9156a2",
+      "bytes": 2845,
+      "mode": "100644",
+      "advertised_group": "Cost Tracker"
+    },
+    {
+      "path": "plugins/ruflo-cost-tracker/skills/cost-report/SKILL.md",
+      "name": "cost-report",
+      "kind": "plugin",
+      "blobSha": "657ab2953312aa5e194e64f3eb0a15f38cb8a8a7",
+      "bytes": 3360,
+      "mode": "100644",
+      "advertised_group": "Cost Tracker"
+    },
+    {
+      "path": "plugins/ruflo-cost-tracker/skills/cost-session/SKILL.md",
+      "name": "cost-session",
+      "kind": "plugin",
+      "blobSha": "355313333505c7edeeea3fcb4d8cc61928ae6c59",
+      "bytes": 3178,
+      "mode": "100644",
+      "advertised_group": "Cost Tracker"
+    },
+    {
+      "path": "plugins/ruflo-cost-tracker/skills/cost-summary/SKILL.md",
+      "name": "cost-summary",
+      "kind": "plugin",
+      "blobSha": "7f2bfafe4427b4aa4338ed5334865cc7a8bbf4c8",
+      "bytes": 2419,
+      "mode": "100644",
+      "advertised_group": "Cost Tracker"
+    },
+    {
+      "path": "plugins/ruflo-cost-tracker/skills/cost-track/SKILL.md",
+      "name": "cost-track",
+      "kind": "plugin",
+      "blobSha": "1d29a2d92c6923ad067038756855c5580f8633ce",
+      "bytes": 3107,
+      "mode": "100644",
+      "advertised_group": "Cost Tracker"
+    },
+    {
+      "path": "plugins/ruflo-cost-tracker/skills/cost-trend/SKILL.md",
+      "name": "cost-trend",
+      "kind": "plugin",
+      "blobSha": "c1ff1d23b38f03cd30db6e1865e15801a43d295d",
+      "bytes": 2028,
+      "mode": "100644",
+      "advertised_group": "Cost Tracker"
+    },
+    {
+      "path": "plugins/ruflo-daa/skills/cognitive-pattern/SKILL.md",
+      "name": "cognitive-pattern",
+      "kind": "plugin",
+      "blobSha": "ba1550a51dece6dd7048244aea1f5745a70d0013",
+      "bytes": 1554,
+      "mode": "100644",
+      "advertised_group": "Dynamic Agent Architecture"
+    },
+    {
+      "path": "plugins/ruflo-daa/skills/daa-agent/SKILL.md",
+      "name": "daa-agent",
+      "kind": "plugin",
+      "blobSha": "8de355868f380a62c8c638e2749175f9cc563e0f",
+      "bytes": 1647,
+      "mode": "100644",
+      "advertised_group": "Dynamic Agent Architecture"
+    },
+    {
+      "path": "plugins/ruflo-ddd/skills/ddd-aggregate/SKILL.md",
+      "name": "ddd-aggregate",
+      "kind": "plugin",
+      "blobSha": "26270bd4d6675e6a4c8badadac245deb522d76b2",
+      "bytes": 3353,
+      "mode": "100644",
+      "advertised_group": "Domain-Driven Design"
+    },
+    {
+      "path": "plugins/ruflo-ddd/skills/ddd-context/SKILL.md",
+      "name": "ddd-context",
+      "kind": "plugin",
+      "blobSha": "657d4c77ed70c569ed443e7d9f03fe4e8827308a",
+      "bytes": 2503,
+      "mode": "100644",
+      "advertised_group": "Domain-Driven Design"
+    },
+    {
+      "path": "plugins/ruflo-ddd/skills/ddd-validate/SKILL.md",
+      "name": "ddd-validate",
+      "kind": "plugin",
+      "blobSha": "ea6694e8579f46da4c3a6a4c2a83597cbdc69534",
+      "bytes": 2570,
+      "mode": "100644",
+      "advertised_group": "Domain-Driven Design"
+    },
+    {
+      "path": "plugins/ruflo-deepseek-harness/skills/deepseek-chat/SKILL.md",
+      "name": "deepseek-chat",
+      "kind": "plugin",
+      "blobSha": "b9913d304fd3fb6f1291a38762fd69c7cd0bc0fe",
+      "bytes": 2447,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-deepseek-harness/skills/deepseek-reason/SKILL.md",
+      "name": "deepseek-reason",
+      "kind": "plugin",
+      "blobSha": "71d8b80609ca4ff501e4cff76b2bfd421e7f0e5e",
+      "bytes": 2647,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-docs/skills/api-docs/SKILL.md",
+      "name": "api-docs",
+      "kind": "plugin",
+      "blobSha": "12f7642672ca4afa6115762487589ca5fc962147",
+      "bytes": 957,
+      "mode": "100644",
+      "advertised_group": "Documentation"
+    },
+    {
+      "path": "plugins/ruflo-docs/skills/doc-gen/SKILL.md",
+      "name": "doc-gen",
+      "kind": "plugin",
+      "blobSha": "f3d8feed4f4c8af289bb48fc332ff1729ff000ec",
+      "bytes": 1085,
+      "mode": "100644",
+      "advertised_group": "Documentation"
+    },
+    {
+      "path": "plugins/ruflo-federation/skills/federation-audit/SKILL.md",
+      "name": "federation-audit",
+      "kind": "plugin",
+      "blobSha": "16e3c6014fc60e6ea25b00e41f36bfc7316bf238",
+      "bytes": 1050,
+      "mode": "100644",
+      "advertised_group": "Federation"
+    },
+    {
+      "path": "plugins/ruflo-federation/skills/federation-init/SKILL.md",
+      "name": "federation-init",
+      "kind": "plugin",
+      "blobSha": "e320fa706f4b9215b0220dc17e7ab887dbf3ec33",
+      "bytes": 916,
+      "mode": "100644",
+      "advertised_group": "Federation"
+    },
+    {
+      "path": "plugins/ruflo-federation/skills/federation-status/SKILL.md",
+      "name": "federation-status",
+      "kind": "plugin",
+      "blobSha": "9b88c5dc43399746bd5427b80dc74b9b019c251a",
+      "bytes": 868,
+      "mode": "100644",
+      "advertised_group": "Federation"
+    },
+    {
+      "path": "plugins/ruflo-goals/skills/deep-research/SKILL.md",
+      "name": "deep-research",
+      "kind": "plugin",
+      "blobSha": "70d9351a33acd6133c099bf1ee2bd5cf03e37138",
+      "bytes": 5140,
+      "mode": "100644",
+      "advertised_group": "Goals"
+    },
+    {
+      "path": "plugins/ruflo-goals/skills/dossier-collect/SKILL.md",
+      "name": "dossier-collect",
+      "kind": "plugin",
+      "blobSha": "ccab15cdddd4663846067a8e5de6e90255fe240d",
+      "bytes": 5697,
+      "mode": "100644",
+      "advertised_group": "Goals"
+    },
+    {
+      "path": "plugins/ruflo-goals/skills/goal-plan/SKILL.md",
+      "name": "goal-plan",
+      "kind": "plugin",
+      "blobSha": "83a8de652dd590e65fc474e82ebe1954e889e91c",
+      "bytes": 3253,
+      "mode": "100644",
+      "advertised_group": "Goals"
+    },
+    {
+      "path": "plugins/ruflo-goals/skills/horizon-track/SKILL.md",
+      "name": "horizon-track",
+      "kind": "plugin",
+      "blobSha": "307161b46c932f57968797afedd43ca9cb2df8b7",
+      "bytes": 2997,
+      "mode": "100644",
+      "advertised_group": "Goals"
+    },
+    {
+      "path": "plugins/ruflo-goals/skills/research-synthesize/SKILL.md",
+      "name": "research-synthesize",
+      "kind": "plugin",
+      "blobSha": "b33a9b19d4e74b128f69dd19d118962177d1a276",
+      "bytes": 3097,
+      "mode": "100644",
+      "advertised_group": "Goals"
+    },
+    {
+      "path": "plugins/ruflo-graph-intelligence/skills/sublinear-core/SKILL.md",
+      "name": "sublinear-core",
+      "kind": "plugin",
+      "blobSha": "f678c7f6ad7a1befe1e75064ddddbc25cd7ab3fc",
+      "bytes": 3531,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-intelligence/skills/intelligence-route/SKILL.md",
+      "name": "intelligence-route",
+      "kind": "plugin",
+      "blobSha": "c2e2f53ef1359f68628e0ce99cce0eda880aafac",
+      "bytes": 4134,
+      "mode": "100644",
+      "advertised_group": "Intelligence"
+    },
+    {
+      "path": "plugins/ruflo-intelligence/skills/intelligence-transfer/SKILL.md",
+      "name": "intelligence-transfer",
+      "kind": "plugin",
+      "blobSha": "522a57e023017c43515271b4b282bb8fcb12603c",
+      "bytes": 4369,
+      "mode": "100644",
+      "advertised_group": "Intelligence"
+    },
+    {
+      "path": "plugins/ruflo-intelligence/skills/neural-train/SKILL.md",
+      "name": "neural-train",
+      "kind": "plugin",
+      "blobSha": "2060feec86a89253eb4dea01db85dded95186128",
+      "bytes": 6658,
+      "mode": "100644",
+      "advertised_group": "Intelligence"
+    },
+    {
+      "path": "plugins/ruflo-iot-cognitum/skills/iot-anomalies/SKILL.md",
+      "name": "iot-anomalies",
+      "kind": "plugin",
+      "blobSha": "259c76bb326e71bb9845ce27ab8c2f2a8ede45f1",
+      "bytes": 836,
+      "mode": "100644",
+      "advertised_group": "IoT (Cognitum)"
+    },
+    {
+      "path": "plugins/ruflo-iot-cognitum/skills/iot-firmware/SKILL.md",
+      "name": "iot-firmware",
+      "kind": "plugin",
+      "blobSha": "1687e8fb381f853dd5e46f3b7db28183bce1fda7",
+      "bytes": 1723,
+      "mode": "100644",
+      "advertised_group": "IoT (Cognitum)"
+    },
+    {
+      "path": "plugins/ruflo-iot-cognitum/skills/iot-fleet/SKILL.md",
+      "name": "iot-fleet",
+      "kind": "plugin",
+      "blobSha": "c49be71080de895ee0672ade88b7f3e95f7e74d3",
+      "bytes": 982,
+      "mode": "100644",
+      "advertised_group": "IoT (Cognitum)"
+    },
+    {
+      "path": "plugins/ruflo-iot-cognitum/skills/iot-register/SKILL.md",
+      "name": "iot-register",
+      "kind": "plugin",
+      "blobSha": "0fbf084209cc6b0847b26cbe38d6ef0da8cd5d81",
+      "bytes": 1050,
+      "mode": "100644",
+      "advertised_group": "IoT (Cognitum)"
+    },
+    {
+      "path": "plugins/ruflo-iot-cognitum/skills/iot-witness-verify/SKILL.md",
+      "name": "iot-witness-verify",
+      "kind": "plugin",
+      "blobSha": "7b6aef36af627ece395dd9f75a17e67c6589e046",
+      "bytes": 639,
+      "mode": "100644",
+      "advertised_group": "IoT (Cognitum)"
+    },
+    {
+      "path": "plugins/ruflo-jujutsu/skills/diff-analyze/SKILL.md",
+      "name": "diff-analyze",
+      "kind": "plugin",
+      "blobSha": "fd1c84e85e1e20619bd27232f8886ebfa35a8463",
+      "bytes": 2261,
+      "mode": "100644",
+      "advertised_group": "Git Analysis"
+    },
+    {
+      "path": "plugins/ruflo-jujutsu/skills/git-workflow/SKILL.md",
+      "name": "git-workflow",
+      "kind": "plugin",
+      "blobSha": "734464cdf6fe9b34eb3dc61fc15b490f670c485d",
+      "bytes": 1930,
+      "mode": "100644",
+      "advertised_group": "Git Analysis"
+    },
+    {
+      "path": "plugins/ruflo-knowledge-graph/skills/kg-extract/SKILL.md",
+      "name": "kg-extract",
+      "kind": "plugin",
+      "blobSha": "9156ceb16de654e63f2b1a649b1b9842b80fbf05",
+      "bytes": 3012,
+      "mode": "100644",
+      "advertised_group": "Knowledge Graph"
+    },
+    {
+      "path": "plugins/ruflo-knowledge-graph/skills/kg-traverse/SKILL.md",
+      "name": "kg-traverse",
+      "kind": "plugin",
+      "blobSha": "40b2eda07d5b2c0ba3e55f226323265ea0a54fd9",
+      "bytes": 3063,
+      "mode": "100644",
+      "advertised_group": "Knowledge Graph"
+    },
+    {
+      "path": "plugins/ruflo-loop-workers/skills/cron-schedule/SKILL.md",
+      "name": "cron-schedule",
+      "kind": "plugin",
+      "blobSha": "0d2a52d29dd39306ba55ac9232338f1559e67d94",
+      "bytes": 1747,
+      "mode": "100644",
+      "advertised_group": "Loop Workers"
+    },
+    {
+      "path": "plugins/ruflo-loop-workers/skills/loop-worker/SKILL.md",
+      "name": "loop-worker",
+      "kind": "plugin",
+      "blobSha": "2e112c29137cf1c1fd71667cca498e57d3a3a516",
+      "bytes": 2564,
+      "mode": "100644",
+      "advertised_group": "Loop Workers"
+    },
+    {
+      "path": "plugins/ruflo-market-data/skills/market-ingest/SKILL.md",
+      "name": "market-ingest",
+      "kind": "plugin",
+      "blobSha": "7b423cc486a400bd89f1f31906891447aa7e894c",
+      "bytes": 2788,
+      "mode": "100644",
+      "advertised_group": "Market Data"
+    },
+    {
+      "path": "plugins/ruflo-market-data/skills/market-pattern/SKILL.md",
+      "name": "market-pattern",
+      "kind": "plugin",
+      "blobSha": "50e013bcf58561bfcec6c241a394604b0e66bde8",
+      "bytes": 2673,
+      "mode": "100644",
+      "advertised_group": "Market Data"
+    },
+    {
+      "path": "plugins/ruflo-metaharness/skills/harness-bench/SKILL.md",
+      "name": "harness-bench",
+      "kind": "plugin",
+      "blobSha": "c00c484d25cf23c8836b71322489356624d558fe",
+      "bytes": 2236,
+      "mode": "100644",
+      "advertised_group": "MetaHarness"
+    },
+    {
+      "path": "plugins/ruflo-metaharness/skills/harness-drift-from-history/SKILL.md",
+      "name": "harness-drift-from-history",
+      "kind": "plugin",
+      "blobSha": "f51900db9c35d7dabb87fd6fd7feee663cf7fc03",
+      "bytes": 2450,
+      "mode": "100644",
+      "advertised_group": "MetaHarness"
+    },
+    {
+      "path": "plugins/ruflo-metaharness/skills/harness-evolve/SKILL.md",
+      "name": "harness-evolve",
+      "kind": "plugin",
+      "blobSha": "224469780ff5e17ca57d0104dcac62afc2f0c54a",
+      "bytes": 6191,
+      "mode": "100644",
+      "advertised_group": "MetaHarness"
+    },
+    {
+      "path": "plugins/ruflo-metaharness/skills/harness-genome/SKILL.md",
+      "name": "harness-genome",
+      "kind": "plugin",
+      "blobSha": "a9b4d68053d2eb17c3dfd147efe6ca48674d3df3",
+      "bytes": 2238,
+      "mode": "100644",
+      "advertised_group": "MetaHarness"
+    },
+    {
+      "path": "plugins/ruflo-metaharness/skills/harness-gepa/SKILL.md",
+      "name": "harness-gepa",
+      "kind": "plugin",
+      "blobSha": "fc83dad43092e606b5ff99d593eb382dde2f5acc",
+      "bytes": 3108,
+      "mode": "100644",
+      "advertised_group": "MetaHarness"
+    },
+    {
+      "path": "plugins/ruflo-metaharness/skills/harness-learn/SKILL.md",
+      "name": "harness-learn",
+      "kind": "plugin",
+      "blobSha": "488f281176b84159453dc06c98200685a0be7185",
+      "bytes": 3104,
+      "mode": "100644",
+      "advertised_group": "MetaHarness"
+    },
+    {
+      "path": "plugins/ruflo-metaharness/skills/harness-mcp-scan/SKILL.md",
+      "name": "harness-mcp-scan",
+      "kind": "plugin",
+      "blobSha": "189f6b7c91ddab29129b0812eada16099e42bbb5",
+      "bytes": 1717,
+      "mode": "100644",
+      "advertised_group": "MetaHarness"
+    },
+    {
+      "path": "plugins/ruflo-metaharness/skills/harness-mint/SKILL.md",
+      "name": "harness-mint",
+      "kind": "plugin",
+      "blobSha": "53ed3ca0687b855b18818d604cdf4501a9664a4e",
+      "bytes": 2832,
+      "mode": "100644",
+      "advertised_group": "MetaHarness"
+    },
+    {
+      "path": "plugins/ruflo-metaharness/skills/harness-oia-audit/SKILL.md",
+      "name": "harness-oia-audit",
+      "kind": "plugin",
+      "blobSha": "9d6023af7b9e5bf64797d05caeb9c99e8aadb793",
+      "bytes": 2927,
+      "mode": "100644",
+      "advertised_group": "MetaHarness"
+    },
+    {
+      "path": "plugins/ruflo-metaharness/skills/harness-score/SKILL.md",
+      "name": "harness-score",
+      "kind": "plugin",
+      "blobSha": "e97d65fd9479b819fae59c7d926d7dbf442f55f6",
+      "bytes": 2377,
+      "mode": "100644",
+      "advertised_group": "MetaHarness"
+    },
+    {
+      "path": "plugins/ruflo-metaharness/skills/harness-security-bench/SKILL.md",
+      "name": "harness-security-bench",
+      "kind": "plugin",
+      "blobSha": "45d74693c06c2a6542f1aff8ca0ead2314744aba",
+      "bytes": 4408,
+      "mode": "100644",
+      "advertised_group": "MetaHarness"
+    },
+    {
+      "path": "plugins/ruflo-metaharness/skills/harness-similarity/SKILL.md",
+      "name": "harness-similarity",
+      "kind": "plugin",
+      "blobSha": "7e098895be44e17b356bc729267fa6fea4182e1e",
+      "bytes": 3350,
+      "mode": "100644",
+      "advertised_group": "MetaHarness"
+    },
+    {
+      "path": "plugins/ruflo-metaharness/skills/harness-threat-model/SKILL.md",
+      "name": "harness-threat-model",
+      "kind": "plugin",
+      "blobSha": "fd6178a83c9d9f9d359f005c6da1e88d7b4aa53d",
+      "bytes": 1452,
+      "mode": "100644",
+      "advertised_group": "MetaHarness"
+    },
+    {
+      "path": "plugins/ruflo-migrations/skills/migrate-create/SKILL.md",
+      "name": "migrate-create",
+      "kind": "plugin",
+      "blobSha": "524033203474726e3feee0e1c8cd99b99148d6f2",
+      "bytes": 2334,
+      "mode": "100644",
+      "advertised_group": "Database Migrations"
+    },
+    {
+      "path": "plugins/ruflo-migrations/skills/migrate-validate/SKILL.md",
+      "name": "migrate-validate",
+      "kind": "plugin",
+      "blobSha": "70e9c758768b2165e2ab0894d421c7f8b369279a",
+      "bytes": 2641,
+      "mode": "100644",
+      "advertised_group": "Database Migrations"
+    },
+    {
+      "path": "plugins/ruflo-music/skills/music-connect/SKILL.md",
+      "name": "music-connect",
+      "kind": "plugin",
+      "blobSha": "41686254784a62e0607b62d786a9418a4dff6b87",
+      "bytes": 3543,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-music/skills/music-generate/SKILL.md",
+      "name": "music-generate",
+      "kind": "plugin",
+      "blobSha": "9f976669ffbdba3d72522889e29ce501eb3c254b",
+      "bytes": 4322,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-music/skills/music-get/SKILL.md",
+      "name": "music-get",
+      "kind": "plugin",
+      "blobSha": "3f85fab8c6ef3fe878c350b15600d549ce65724a",
+      "bytes": 1202,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-music/skills/music-list/SKILL.md",
+      "name": "music-list",
+      "kind": "plugin",
+      "blobSha": "13f74ad01464a07f1c79fe66dbe0919f59fa595f",
+      "bytes": 1333,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-music/skills/music-master/SKILL.md",
+      "name": "music-master",
+      "kind": "plugin",
+      "blobSha": "3d9cda545435e1bbc41fc2e3d164624558954e78",
+      "bytes": 1084,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-music/skills/music-midi/SKILL.md",
+      "name": "music-midi",
+      "kind": "plugin",
+      "blobSha": "a60d1db46998698594d4d989806428c36af11931",
+      "bytes": 945,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-music/skills/music-stems/SKILL.md",
+      "name": "music-stems",
+      "kind": "plugin",
+      "blobSha": "f28ed9fc721e9a730775c199d10f16dc2280ae69",
+      "bytes": 1598,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-neural-trader/skills/trader-backtest/SKILL.md",
+      "name": "trader-backtest",
+      "kind": "plugin",
+      "blobSha": "8d05c982e7135a38ac4f16edf796cd9b363fef16",
+      "bytes": 6080,
+      "mode": "100644",
+      "advertised_group": "Neural Trader"
+    },
+    {
+      "path": "plugins/ruflo-neural-trader/skills/trader-cloud-backtest/SKILL.md",
+      "name": "trader-cloud-backtest",
+      "kind": "plugin",
+      "blobSha": "8def68527acd1fd421758a80d6b445183541ef39",
+      "bytes": 7292,
+      "mode": "100644",
+      "advertised_group": "Neural Trader"
+    },
+    {
+      "path": "plugins/ruflo-neural-trader/skills/trader-explain/SKILL.md",
+      "name": "trader-explain",
+      "kind": "plugin",
+      "blobSha": "0761dc03f3923e7c8a2775ea137e1f82a73bef30",
+      "bytes": 8087,
+      "mode": "100644",
+      "advertised_group": "Neural Trader"
+    },
+    {
+      "path": "plugins/ruflo-neural-trader/skills/trader-portfolio-cg/SKILL.md",
+      "name": "trader-portfolio-cg",
+      "kind": "plugin",
+      "blobSha": "cfd57403eecbd3ced52d0145b86baeeaf1e539c5",
+      "bytes": 6794,
+      "mode": "100644",
+      "advertised_group": "Neural Trader"
+    },
+    {
+      "path": "plugins/ruflo-neural-trader/skills/trader-portfolio/SKILL.md",
+      "name": "trader-portfolio",
+      "kind": "plugin",
+      "blobSha": "69c5b26b5f9f4d1d78dc23c850278113870221ec",
+      "bytes": 2336,
+      "mode": "100644",
+      "advertised_group": "Neural Trader"
+    },
+    {
+      "path": "plugins/ruflo-neural-trader/skills/trader-regime/SKILL.md",
+      "name": "trader-regime",
+      "kind": "plugin",
+      "blobSha": "7bd6153e31e5fca8f9c2a42ac1ca468532dd63b9",
+      "bytes": 2135,
+      "mode": "100644",
+      "advertised_group": "Neural Trader"
+    },
+    {
+      "path": "plugins/ruflo-neural-trader/skills/trader-risk/SKILL.md",
+      "name": "trader-risk",
+      "kind": "plugin",
+      "blobSha": "e26507cf2af12a9eca5ffd9ff5f3224e549613d1",
+      "bytes": 1969,
+      "mode": "100644",
+      "advertised_group": "Neural Trader"
+    },
+    {
+      "path": "plugins/ruflo-neural-trader/skills/trader-signal/SKILL.md",
+      "name": "trader-signal",
+      "kind": "plugin",
+      "blobSha": "a2601a721c58fc4bc44202d12b141673d79e4afb",
+      "bytes": 2824,
+      "mode": "100644",
+      "advertised_group": "Neural Trader"
+    },
+    {
+      "path": "plugins/ruflo-neural-trader/skills/trader-train/SKILL.md",
+      "name": "trader-train",
+      "kind": "plugin",
+      "blobSha": "2e7305f5e372db84de990c93372c99e939d71780",
+      "bytes": 2083,
+      "mode": "100644",
+      "advertised_group": "Neural Trader"
+    },
+    {
+      "path": "plugins/ruflo-observability/skills/observe-metrics/SKILL.md",
+      "name": "observe-metrics",
+      "kind": "plugin",
+      "blobSha": "f8835364f37b277566cba1235b43ac27d54b6399",
+      "bytes": 2630,
+      "mode": "100644",
+      "advertised_group": "Observability"
+    },
+    {
+      "path": "plugins/ruflo-observability/skills/observe-trace/SKILL.md",
+      "name": "observe-trace",
+      "kind": "plugin",
+      "blobSha": "f36463ad96ccc4145af3e02ed3a06f110dc1ebb4",
+      "bytes": 2544,
+      "mode": "100644",
+      "advertised_group": "Observability"
+    },
+    {
+      "path": "plugins/ruflo-plugin-creator/skills/create-mod/SKILL.md",
+      "name": "create-mod",
+      "kind": "plugin",
+      "blobSha": "dd72f6d531aec7a39a91caf81eb8f63827c4430c",
+      "bytes": 4803,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-plugin-creator/skills/create-plugin/SKILL.md",
+      "name": "create-plugin",
+      "kind": "plugin",
+      "blobSha": "3f8e08430d888b7f390c561650e41f23f120d20a",
+      "bytes": 6104,
+      "mode": "100644",
+      "advertised_group": "Plugin Creator"
+    },
+    {
+      "path": "plugins/ruflo-plugin-creator/skills/validate-plugin/SKILL.md",
+      "name": "validate-plugin",
+      "kind": "plugin",
+      "blobSha": "c72ac626bbdd731b4acaad5808c41e0c3c2643ec",
+      "bytes": 2555,
+      "mode": "100644",
+      "advertised_group": "Plugin Creator"
+    },
+    {
+      "path": "plugins/ruflo-rag-memory/skills/memory-bridge/SKILL.md",
+      "name": "memory-bridge",
+      "kind": "plugin",
+      "blobSha": "c5e2e59101a86916ab1b69b121fdd453b7b690e0",
+      "bytes": 2419,
+      "mode": "100644",
+      "advertised_group": "RAG Memory"
+    },
+    {
+      "path": "plugins/ruflo-rag-memory/skills/memory-search/SKILL.md",
+      "name": "memory-search",
+      "kind": "plugin",
+      "blobSha": "9c49a245c1011d25b5abcf27da4bca36210544a1",
+      "bytes": 3639,
+      "mode": "100644",
+      "advertised_group": "RAG Memory"
+    },
+    {
+      "path": "plugins/ruflo-ruos/skills/ruos-host-run/SKILL.md",
+      "name": "ruos-host-run",
+      "kind": "plugin",
+      "blobSha": "d56b13c63994ca70f557d093c5737d52c212a6c2",
+      "bytes": 4170,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-rure/skills/analyze-app/SKILL.md",
+      "name": "analyze-app",
+      "kind": "plugin",
+      "blobSha": "a914413273bc64998139acfb7c7d7b6fd6d815c3",
+      "bytes": 5935,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-ruvector/skills/vector-cluster/SKILL.md",
+      "name": "vector-cluster",
+      "kind": "plugin",
+      "blobSha": "4e0d9cae1532c9c795c45d616a2ddf12da6f79bd",
+      "bytes": 2162,
+      "mode": "100644",
+      "advertised_group": "RuVector"
+    },
+    {
+      "path": "plugins/ruflo-ruvector/skills/vector-embed/SKILL.md",
+      "name": "vector-embed",
+      "kind": "plugin",
+      "blobSha": "95ff49636e6f1927d83387b2f088550a42889a05",
+      "bytes": 2371,
+      "mode": "100644",
+      "advertised_group": "RuVector"
+    },
+    {
+      "path": "plugins/ruflo-ruvector/skills/vector-hyperbolic/SKILL.md",
+      "name": "vector-hyperbolic",
+      "kind": "plugin",
+      "blobSha": "7f84d01a0c0b36b3751cd414d61b5fae123aeeba",
+      "bytes": 3377,
+      "mode": "100644",
+      "advertised_group": "RuVector"
+    },
+    {
+      "path": "plugins/ruflo-ruvector/skills/vector-setup/SKILL.md",
+      "name": "vector-setup",
+      "kind": "plugin",
+      "blobSha": "a9d5c64275b2e784b891bd5fee5d60dac3f8de8d",
+      "bytes": 4056,
+      "mode": "100644",
+      "advertised_group": "RuVector"
+    },
+    {
+      "path": "plugins/ruflo-ruvllm/skills/chat-format/SKILL.md",
+      "name": "chat-format",
+      "kind": "plugin",
+      "blobSha": "b5004a59a576c5b56703dd0bee13706930255537",
+      "bytes": 2237,
+      "mode": "100644",
+      "advertised_group": "RuVLLM"
+    },
+    {
+      "path": "plugins/ruflo-ruvllm/skills/llm-config/SKILL.md",
+      "name": "llm-config",
+      "kind": "plugin",
+      "blobSha": "3e16d007d1f3f108348dbe403a7bc707b9e1fcfe",
+      "bytes": 2630,
+      "mode": "100644",
+      "advertised_group": "RuVLLM"
+    },
+    {
+      "path": "plugins/ruflo-ruvllm/skills/ruvllm-runtime/SKILL.md",
+      "name": "ruvllm-runtime",
+      "kind": "plugin",
+      "blobSha": "453296529d51f14f3bca732c7294a3f384003621",
+      "bytes": 3493,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-rvf/skills/rvf-manage/SKILL.md",
+      "name": "rvf-manage",
+      "kind": "plugin",
+      "blobSha": "9275354f121be5f0d94c741cc09c461f6990b36c",
+      "bytes": 2526,
+      "mode": "100644",
+      "advertised_group": "RVF"
+    },
+    {
+      "path": "plugins/ruflo-rvf/skills/session-persist/SKILL.md",
+      "name": "session-persist",
+      "kind": "plugin",
+      "blobSha": "d5bd8680a47a6cc4742b94d8d454ad34536249d5",
+      "bytes": 1674,
+      "mode": "100644",
+      "advertised_group": "RVF"
+    },
+    {
+      "path": "plugins/ruflo-security-audit/skills/dependency-check/SKILL.md",
+      "name": "dependency-check",
+      "kind": "plugin",
+      "blobSha": "ff713b49005c6a4475db3a52d91a85c265d45c14",
+      "bytes": 1398,
+      "mode": "100644",
+      "advertised_group": "Security Audit"
+    },
+    {
+      "path": "plugins/ruflo-security-audit/skills/security-scan/SKILL.md",
+      "name": "security-scan",
+      "kind": "plugin",
+      "blobSha": "e5cebc7e17753ae75f035927a3e920f30b17cc73",
+      "bytes": 1961,
+      "mode": "100644",
+      "advertised_group": "Security Audit"
+    },
+    {
+      "path": "plugins/ruflo-sparc/skills/sparc-implement/SKILL.md",
+      "name": "sparc-implement",
+      "kind": "plugin",
+      "blobSha": "9887af0a94cada568db408b3bc91d23758234f41",
+      "bytes": 5522,
+      "mode": "100644",
+      "advertised_group": "SPARC"
+    },
+    {
+      "path": "plugins/ruflo-sparc/skills/sparc-refine/SKILL.md",
+      "name": "sparc-refine",
+      "kind": "plugin",
+      "blobSha": "96c5d9ce6a1046b9752dc26b1dd7a843885de633",
+      "bytes": 8620,
+      "mode": "100644",
+      "advertised_group": "SPARC"
+    },
+    {
+      "path": "plugins/ruflo-sparc/skills/sparc-spec/SKILL.md",
+      "name": "sparc-spec",
+      "kind": "plugin",
+      "blobSha": "d5dd02347eedc8054fb2fa1be34a6f9e2d75c88d",
+      "bytes": 4596,
+      "mode": "100644",
+      "advertised_group": "SPARC"
+    },
+    {
+      "path": "plugins/ruflo-swarm/skills/monitor-stream/SKILL.md",
+      "name": "monitor-stream",
+      "kind": "plugin",
+      "blobSha": "b4b76259ef209747d2d8111ae287743032cab1a3",
+      "bytes": 978,
+      "mode": "100644",
+      "advertised_group": "Swarm"
+    },
+    {
+      "path": "plugins/ruflo-swarm/skills/swarm-init/SKILL.md",
+      "name": "swarm-init",
+      "kind": "plugin",
+      "blobSha": "071b4c9c16ffd2d553e3009fe59e4247f7f5b853",
+      "bytes": 1274,
+      "mode": "100644",
+      "advertised_group": "Swarm"
+    },
+    {
+      "path": "plugins/ruflo-testgen/skills/tdd-repair/SKILL.md",
+      "name": "tdd-repair",
+      "kind": "plugin",
+      "blobSha": "b5d368487e40488ec0da0818751d7fe1133c9fd3",
+      "bytes": 6467,
+      "mode": "100644",
+      "advertised_group": "Test Generation"
+    },
+    {
+      "path": "plugins/ruflo-testgen/skills/tdd-workflow/SKILL.md",
+      "name": "tdd-workflow",
+      "kind": "plugin",
+      "blobSha": "c099a704c9d935d3aa9d3a8121e68ec3267a438d",
+      "bytes": 2369,
+      "mode": "100644",
+      "advertised_group": "Test Generation"
+    },
+    {
+      "path": "plugins/ruflo-testgen/skills/test-gaps/SKILL.md",
+      "name": "test-gaps",
+      "kind": "plugin",
+      "blobSha": "65860d64706fe88f0638967ecbcb709be6f8f649",
+      "bytes": 927,
+      "mode": "100644",
+      "advertised_group": "Test Generation"
+    },
+    {
+      "path": "plugins/ruflo-workflows/skills/gaia-architecture-comparison/SKILL.md",
+      "name": "gaia-architecture-comparison",
+      "kind": "plugin",
+      "blobSha": "df864e333e29d674165291204898390cdbedade1",
+      "bytes": 5190,
+      "mode": "100644",
+      "advertised_group": "Workflows"
+    },
+    {
+      "path": "plugins/ruflo-workflows/skills/gaia-debugging/SKILL.md",
+      "name": "gaia-debugging",
+      "kind": "plugin",
+      "blobSha": "1f40e09a243bdd5daeca24e6a2ebe6a0a3440cce",
+      "bytes": 5437,
+      "mode": "100644",
+      "advertised_group": "Workflows"
+    },
+    {
+      "path": "plugins/ruflo-workflows/skills/gaia-submission/SKILL.md",
+      "name": "gaia-submission",
+      "kind": "plugin",
+      "blobSha": "d46b13083ae13e859905d2a2d7b79e86eb70960c",
+      "bytes": 5080,
+      "mode": "100644",
+      "advertised_group": "Workflows"
+    },
+    {
+      "path": "plugins/ruflo-workflows/skills/workflow-create/SKILL.md",
+      "name": "workflow-create",
+      "kind": "plugin",
+      "blobSha": "06e2072a58fb594b235e85cc7bf6d3777ddfef44",
+      "bytes": 4813,
+      "mode": "100644",
+      "advertised_group": "Workflows"
+    },
+    {
+      "path": "plugins/ruflo-workflows/skills/workflow-run/SKILL.md",
+      "name": "workflow-run",
+      "kind": "plugin",
+      "blobSha": "df8bbcc614e0f629759efd9614cc2a4b10fb33a2",
+      "bytes": 2847,
+      "mode": "100644",
+      "advertised_group": "Workflows"
+    },
+    {
+      "path": "ruflo/src/ruvocal/.claude/skills/add-model-descriptions/SKILL.md",
+      "name": "add-model-descriptions",
+      "kind": "support",
+      "blobSha": "8c82b6ec2df321a7a74fcb25214c13d1e6f1f2be",
+      "bytes": 2400,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/browser/skills/browser/SKILL.md",
+      "name": "browser",
+      "kind": "legacy-v3",
+      "blobSha": "4f0b216e5a8fa928c23a41378da241f8da4a1703",
+      "bytes": 5286,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/agentdb-advanced/SKILL.md",
+      "name": "agentdb-advanced",
+      "kind": "legacy-v3",
+      "blobSha": "1caa8bc88bf02a40495b0fed404d6c7af1542d83",
+      "bytes": 13066,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/agentdb-learning/SKILL.md",
+      "name": "agentdb-learning",
+      "kind": "legacy-v3",
+      "blobSha": "e21b17ff2f4374b3dffe8fa04a7d2900d09f2937",
+      "bytes": 11906,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/agentdb-memory-patterns/SKILL.md",
+      "name": "agentdb-memory-patterns",
+      "kind": "legacy-v3",
+      "blobSha": "64d0ef99aa9da227f9b24c55f95e2fcd9ed3cbd8",
+      "bytes": 8690,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/agentdb-optimization/SKILL.md",
+      "name": "agentdb-optimization",
+      "kind": "legacy-v3",
+      "blobSha": "dd8ae59826312a11f8148782820a81ca0f436e5e",
+      "bytes": 12151,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/agentdb-vector-search/SKILL.md",
+      "name": "agentdb-vector-search",
+      "kind": "legacy-v3",
+      "blobSha": "fe0740e7572af7eb40ca239cdd1113192c6ec938",
+      "bytes": 8961,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/browser/SKILL.md",
+      "name": "browser",
+      "kind": "legacy-v3",
+      "blobSha": "4f0b216e5a8fa928c23a41378da241f8da4a1703",
+      "bytes": 5286,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/fast-code-edits/SKILL.md",
+      "name": "fast-code-edits",
+      "kind": "legacy-v3",
+      "blobSha": "47ab44a57dae9d33be2a9162322afbdfb44b9b0c",
+      "bytes": 2177,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/flow-nexus-neural/SKILL.md",
+      "name": "flow-nexus-neural",
+      "kind": "legacy-v3",
+      "blobSha": "c76b6ca12cfc64872da0c239e8b48cd5b316bd57",
+      "bytes": 16126,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/flow-nexus-platform/SKILL.md",
+      "name": "flow-nexus-platform",
+      "kind": "legacy-v3",
+      "blobSha": "a1e43a6328c7bdb2e2bca9ae356d787a83c3d3e1",
+      "bytes": 25516,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/flow-nexus-swarm/SKILL.md",
+      "name": "flow-nexus-swarm",
+      "kind": "legacy-v3",
+      "blobSha": "f7b9b6ff64bee7393731bbc0349f23fa884fa395",
+      "bytes": 16557,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/github-code-review/SKILL.md",
+      "name": "github-code-review",
+      "kind": "legacy-v3",
+      "blobSha": "42ec8f2631521b091b69610d73f863a278c731ac",
+      "bytes": 25680,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/github-multi-repo/SKILL.md",
+      "name": "github-multi-repo",
+      "kind": "legacy-v3",
+      "blobSha": "53f827f0fd84526109849d0cf00a88e997820cd9",
+      "bytes": 22638,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/github-project-management/SKILL.md",
+      "name": "github-project-management",
+      "kind": "legacy-v3",
+      "blobSha": "8e53128559247ba70eabf205b4eaaa362441928e",
+      "bytes": 29536,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/github-release-management/SKILL.md",
+      "name": "github-release-management",
+      "kind": "legacy-v3",
+      "blobSha": "a715b63a2d222b78a08b5453347599246a493348",
+      "bytes": 29368,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/github-workflow-automation/SKILL.md",
+      "name": "github-workflow-automation",
+      "kind": "legacy-v3",
+      "blobSha": "c1fdfface93b8821de1cb290f5821ae4c0f0cba0",
+      "bytes": 23619,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/graph-mincut/SKILL.md",
+      "name": "graph-mincut",
+      "kind": "legacy-v3",
+      "blobSha": "6f50b12cd7ee8916d588eba4cc9d342a99b95bc9",
+      "bytes": 2107,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/hooks-automation/SKILL.md",
+      "name": "hooks-automation",
+      "kind": "legacy-v3",
+      "blobSha": "931a45ab2b8e5ee9bee812635c5247298ea2f139",
+      "bytes": 32143,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/injection-defense/SKILL.md",
+      "name": "injection-defense",
+      "kind": "legacy-v3",
+      "blobSha": "9a25c363c9feeaa1990ee0807d0a2a4498aaba60",
+      "bytes": 1967,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/lora-learning/SKILL.md",
+      "name": "lora-learning",
+      "kind": "legacy-v3",
+      "blobSha": "e757a7e6b16e46f813c83ea6d3c81ba108431e84",
+      "bytes": 1955,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/pair-programming/SKILL.md",
+      "name": "pair-programming",
+      "kind": "legacy-v3",
+      "blobSha": "ff377d077ce3e14d374c41c49118d47849f04ff7",
+      "bytes": 24862,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/reasoningbank-agentdb/SKILL.md",
+      "name": "reasoningbank-agentdb",
+      "kind": "legacy-v3",
+      "blobSha": "057ac09a6af1cfc89d861ffd845fdabdd206cc1a",
+      "bytes": 10923,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/reasoningbank-intelligence/SKILL.md",
+      "name": "reasoningbank-intelligence",
+      "kind": "legacy-v3",
+      "blobSha": "74930e73a4557043009178e6025fa11dd2407682",
+      "bytes": 4828,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/skill-builder/SKILL.md",
+      "name": "skill-builder",
+      "kind": "legacy-v3",
+      "blobSha": "62c3c9192847d51c7b3fbc6a0c13a754628f1195",
+      "bytes": 21899,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/sparc-methodology/SKILL.md",
+      "name": "sparc-methodology",
+      "kind": "legacy-v3",
+      "blobSha": "a3658df972342b431cdf14a682addfec0b27f65f",
+      "bytes": 25268,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/stream-chain/SKILL.md",
+      "name": "stream-chain",
+      "kind": "legacy-v3",
+      "blobSha": "5ca1e610c79d7020b99502f57a17cb0ed40d1b5d",
+      "bytes": 12613,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/sublinear-solver/SKILL.md",
+      "name": "sublinear-solver",
+      "kind": "legacy-v3",
+      "blobSha": "93f377d6cdb3f0d30ea323b4526cb85dc81e823a",
+      "bytes": 2039,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/swarm-advanced/SKILL.md",
+      "name": "swarm-advanced",
+      "kind": "legacy-v3",
+      "blobSha": "cae7bc16c86a31f3e8dee21fde51f168e6dacf18",
+      "bytes": 23736,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/swarm-orchestration/SKILL.md",
+      "name": "swarm-orchestration",
+      "kind": "legacy-v3",
+      "blobSha": "50d7fce3c901b2d2e73536985d9c3758501e67b9",
+      "bytes": 4308,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/v3-cli-modernization/SKILL.md",
+      "name": "v3-cli-modernization",
+      "kind": "legacy-v3",
+      "blobSha": "adf30ed62c385026228f8086a248175dd503c52d",
+      "bytes": 25722,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/v3-core-implementation/SKILL.md",
+      "name": "v3-core-implementation",
+      "kind": "legacy-v3",
+      "blobSha": "b1d2eda9f8e74af6fe03d8ee6ab396abd3aadbc5",
+      "bytes": 22017,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/v3-ddd-architecture/SKILL.md",
+      "name": "v3-ddd-architecture",
+      "kind": "legacy-v3",
+      "blobSha": "a2829891c1f3ac9a0f399847a07435789b98a43f",
+      "bytes": 12164,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/v3-integration-deep/SKILL.md",
+      "name": "v3-integration-deep",
+      "kind": "legacy-v3",
+      "blobSha": "1981bb8020bbbc1f32745a7a89844c77213fdbdb",
+      "bytes": 7276,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/v3-mcp-optimization/SKILL.md",
+      "name": "v3-mcp-optimization",
+      "kind": "legacy-v3",
+      "blobSha": "7450cbab380b07c7f94f18848df2603c57f4f3ab",
+      "bytes": 21426,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/v3-memory-unification/SKILL.md",
+      "name": "v3-memory-unification",
+      "kind": "legacy-v3",
+      "blobSha": "4e0d15e56d2ef8619f14724927d9f0bd79e49dd9",
+      "bytes": 5227,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/v3-performance-optimization/SKILL.md",
+      "name": "v3-performance-optimization",
+      "kind": "legacy-v3",
+      "blobSha": "6d71b0de4171e3afb12ae9b15dc32f483935fe01",
+      "bytes": 11437,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/v3-security-overhaul/SKILL.md",
+      "name": "v3-security-overhaul",
+      "kind": "legacy-v3",
+      "blobSha": "fe7c79d232b585791c80464176b6c346cc2d9f62",
+      "bytes": 2438,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/v3-swarm-coordination/SKILL.md",
+      "name": "v3-swarm-coordination",
+      "kind": "legacy-v3",
+      "blobSha": "aa9ec507ccfe2e023e008cf3b228858a9a775b18",
+      "bytes": 12135,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/vector-quantization/SKILL.md",
+      "name": "vector-quantization",
+      "kind": "legacy-v3",
+      "blobSha": "179a9f4e389ff09994b52bf0dc56698c00e6df1a",
+      "bytes": 2427,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/.claude/skills/verification-quality/SKILL.md",
+      "name": "verification-quality",
+      "kind": "legacy-v3",
+      "blobSha": "e8016df8f5e85c4ae58a3ab3b7f5a3c9e5cd6134",
+      "bytes": 20624,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/cli/templates/grok/skills/agent-teams-grok/SKILL.md",
+      "name": "agent-teams-grok",
+      "kind": "legacy-v3",
+      "blobSha": "a444d15bf15bfca737de9520619ad7304ac45dd2",
+      "bytes": 4433,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/codex/.agents/skills/fast-code-edits/SKILL.md",
+      "name": "fast-code-edits",
+      "kind": "legacy-v3",
+      "blobSha": "13c7e6bf9e6cc5329fcffb4a2f5d7651a408ebab",
+      "bytes": 1683,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/codex/.agents/skills/github-automation/SKILL.md",
+      "name": "github-automation",
+      "kind": "legacy-v3",
+      "blobSha": "e1f2df511a54f09480114bb7d5e84a87f3f025c0",
+      "bytes": 728,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/codex/.agents/skills/graph-mincut/SKILL.md",
+      "name": "graph-mincut",
+      "kind": "legacy-v3",
+      "blobSha": "912058fb84b74ad93014eb36f5567bb65da314f1",
+      "bytes": 1830,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/codex/.agents/skills/injection-defense/SKILL.md",
+      "name": "injection-defense",
+      "kind": "legacy-v3",
+      "blobSha": "b9349f698ae3bedf6f21d3f8cd2ab9872546436a",
+      "bytes": 1473,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/codex/.agents/skills/lora-learning/SKILL.md",
+      "name": "lora-learning",
+      "kind": "legacy-v3",
+      "blobSha": "a4c422a304c0bfecfb0167578c1513340ceca3bb",
+      "bytes": 1443,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/codex/.agents/skills/memory-management/SKILL.md",
+      "name": "memory-management",
+      "kind": "legacy-v3",
+      "blobSha": "0a2e0a02f6a1f9e851225970f2b5a285dd7b51b2",
+      "bytes": 922,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/codex/.agents/skills/performance-analysis/SKILL.md",
+      "name": "performance-analysis",
+      "kind": "legacy-v3",
+      "blobSha": "e47cd6badfc0cc2330d2d77fb1e91bba7dda7e34",
+      "bytes": 766,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/codex/.agents/skills/security-audit/SKILL.md",
+      "name": "security-audit",
+      "kind": "legacy-v3",
+      "blobSha": "f80ceae14954e5dde2092db87058fb17499d4238",
+      "bytes": 914,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/codex/.agents/skills/sparc-methodology/SKILL.md",
+      "name": "sparc-methodology",
+      "kind": "legacy-v3",
+      "blobSha": "e99f9d5ed3d7bf3fe1751761531dd3669ff6d5cd",
+      "bytes": 1046,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/codex/.agents/skills/sublinear-solver/SKILL.md",
+      "name": "sublinear-solver",
+      "kind": "legacy-v3",
+      "blobSha": "9bfe623dc62c78c6eb2dd25a91acad0ea9e235dd",
+      "bytes": 1697,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/codex/.agents/skills/swarm-orchestration/SKILL.md",
+      "name": "swarm-orchestration",
+      "kind": "legacy-v3",
+      "blobSha": "6023703db294bc9a7e331287c9e76ed1a6b42665",
+      "bytes": 1044,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "v3/@claude-flow/codex/.agents/skills/vector-quantization/SKILL.md",
+      "name": "vector-quantization",
+      "kind": "legacy-v3",
+      "blobSha": "dff13eb9f3d4ec976f6dd0da48fdccbe067e425d",
+      "bytes": 1873,
+      "mode": "100644",
+      "advertised_group": null
+    }
+  ],
+  "supportingFiles": [
+    {
+      "path": ".agents/skills/memory-management/scripts/memory-backup.sh",
+      "name": "scripts",
+      "kind": "agent",
+      "blobSha": "de09ebc9c94fb623b35488603553d372f78a57c7",
+      "bytes": 379,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/memory-management/scripts/memory-consolidate.sh",
+      "name": "scripts",
+      "kind": "agent",
+      "blobSha": "c0b76d8ae49d359e44e4548a6c16c2b9f5a0b49a",
+      "bytes": 272,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/security-audit/scripts/cve-remediate.sh",
+      "name": "scripts",
+      "kind": "agent",
+      "blobSha": "60b8dea9da09cffe4514264a2d44ed1cbc0733f0",
+      "bytes": 344,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/security-audit/scripts/security-scan.sh",
+      "name": "scripts",
+      "kind": "agent",
+      "blobSha": "2601db10c5af8a5a2f201f5e05022689c8e1b649",
+      "bytes": 779,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/sparc-methodology/scripts/sparc-init.sh",
+      "name": "scripts",
+      "kind": "agent",
+      "blobSha": "c861d922340e44f42dc2632c3dcd6052a9caeeb9",
+      "bytes": 614,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/sparc-methodology/scripts/sparc-review.sh",
+      "name": "scripts",
+      "kind": "agent",
+      "blobSha": "f268d9e80b73b06f0bf18aad8830feacaf47f1b6",
+      "bytes": 390,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/swarm-orchestration/scripts/swarm-monitor.sh",
+      "name": "scripts",
+      "kind": "agent",
+      "blobSha": "5af101470fd43cd65fbcc4af52bbd6b31fae0e35",
+      "bytes": 177,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": ".agents/skills/swarm-orchestration/scripts/swarm-start.sh",
+      "name": "scripts",
+      "kind": "agent",
+      "blobSha": "6755accd5de17ec48672d0d5515fe55fece57de2",
+      "bytes": 331,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "chatgpt-plugin/skills/coordinate-ruflo-swarm/agents/openai.yaml",
+      "name": "agents",
+      "kind": "chatgpt",
+      "blobSha": "20a8901047f438069aae1a1493d8a088aab1e9d6",
+      "bytes": 545,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "chatgpt-plugin/skills/federation-audit/agents/openai.yaml",
+      "name": "agents",
+      "kind": "chatgpt",
+      "blobSha": "28fc63f5bc6eee7558041c1f428daf3a1173afef",
+      "bytes": 566,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "chatgpt-plugin/skills/federation-init/agents/openai.yaml",
+      "name": "agents",
+      "kind": "chatgpt",
+      "blobSha": "d2ef0d6b990e6cd6a1603eb87e590398468593e7",
+      "bytes": 544,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "chatgpt-plugin/skills/federation-status/agents/openai.yaml",
+      "name": "agents",
+      "kind": "chatgpt",
+      "blobSha": "72cb536fb002f0a18a4f4619b115250d0e6fb300",
+      "bytes": 546,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "chatgpt-plugin/skills/publish-ruflo-update/agents/openai.yaml",
+      "name": "agents",
+      "kind": "chatgpt",
+      "blobSha": "e825ca1f9775a5a8275aa48159f5aa0c0e9739a9",
+      "bytes": 525,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "chatgpt-plugin/skills/triage-ruflo-work/agents/openai.yaml",
+      "name": "agents",
+      "kind": "chatgpt",
+      "blobSha": "f6312eb1c1b20e317fe6c1a4bcafb646c86dd6ce",
+      "bytes": 528,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-console/skills/generate-console-theme/agents/openai.yaml",
+      "name": "agents",
+      "kind": "plugin",
+      "blobSha": "0d8f8957371155cee80409b4d88ca7678c2b40fc",
+      "bytes": 253,
+      "mode": "100644",
+      "advertised_group": null
+    },
+    {
+      "path": "plugins/ruflo-console/skills/generate-console-theme/references/preset.md",
+      "name": "references",
+      "kind": "plugin",
+      "blobSha": "0094829098639de775c76aab179a51a69ad9d0de",
+      "bytes": 1738,
+      "mode": "100644",
+      "advertised_group": null
+    }
+  ]
+}
