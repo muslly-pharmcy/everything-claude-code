@@ -1,0 +1,3 @@
+[submodule "vendor/ruflo/upstream"]
+	path = vendor/ruflo/upstream
+	url = https://github.com/ruvnet/ruflo.git

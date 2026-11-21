@@ -7,9 +7,10 @@ import {fileURLToPath} from 'node:url';
 
 const a=process.argv.slice(2);
 const arg=(k,d)=>{const i=a.indexOf(k);return i<0?d:a[i+1];};
-const scope=arg('--scope','published');
+const scope=arg('--scope','all');
 const apply=a.includes('--apply');
 if(!['published','all','core'].includes(scope))throw Error('Invalid scope');
+if(apply&&scope!=='all')throw Error('Refusing to bulk-activate external skills. Import --scope all into passive vendor/ruflo/source, then promote individually after review.');
 if(apply&&!a.includes('--i-reviewed-these-skills'))throw Error('Review before use and pass --i-reviewed-these-skills');
 const base=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const m=JSON.parse(await readFile(join(base,'vendor/ruflo/skills-catalog.json'),'utf8'));
@@ -20,6 +21,7 @@ const files=[...m.files,...(scope==='all'?m.supportingFiles:[])].filter(x=>
 const destFor=x=>scope==='all'?join('vendor','ruflo','source',...x.path.split('/')):
  scope==='core'?join('.agents','skills','ruflo','SKILL.md'):join('.agents','skills','ruflo-'+x.name,'SKILL.md');
 console.log('Scope='+scope+', files='+files.length+', apply='+apply+', destination='+dest);
+if(files.length>419)throw Error('Invalid source inventory size');
 if(!apply){for(const x of files)console.log(x.path+' -> '+destFor(x));process.exit(0);}
 let added=0,unchanged=0;
 for(const x of files){
