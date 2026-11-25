@@ -24,12 +24,14 @@ console.log();
 let totalPassed = 0;
 let totalFailed = 0;
 let totalTests = 0;
+let runnerFailures = 0;
 
 for (const testFile of testFiles) {
   const testPath = path.join(testsDir, testFile);
 
   if (!fs.existsSync(testPath)) {
-    console.log(`⚠ Skipping ${testFile} (file not found)`);
+    console.error(`Missing required test suite: ${testFile}`);
+    runnerFailures += 1;
     continue;
   }
 
@@ -46,10 +48,15 @@ for (const testFile of testFiles) {
     const passedMatch = output.match(/Passed:\s*(\d+)/);
     const failedMatch = output.match(/Failed:\s*(\d+)/);
 
+    if (!passedMatch || !failedMatch || Number(passedMatch[1]) + Number(failedMatch[1]) === 0) {
+      console.error(`Missing or empty test summary: ${testFile}`);
+      runnerFailures += 1;
+    }
     if (passedMatch) totalPassed += parseInt(passedMatch[1], 10);
     if (failedMatch) totalFailed += parseInt(failedMatch[1], 10);
 
   } catch (err) {
+    runnerFailures += 1;
     console.log(err.stdout || '');
     console.log(err.stderr || '');
 
@@ -73,4 +80,5 @@ console.log(`║  Passed:      ${String(totalPassed).padStart(4)}  ✓          
 console.log(`║  Failed:      ${String(totalFailed).padStart(4)}  ${totalFailed > 0 ? '✗' : ' '}                                   ║`);
 console.log('╚══════════════════════════════════════════════════════════╝');
 
-process.exit(totalFailed > 0 ? 1 : 0);
+console.log(`Runner failures: ${runnerFailures}`);
+process.exit(totalFailed > 0 || runnerFailures > 0 || totalTests === 0 ? 1 : 0);
