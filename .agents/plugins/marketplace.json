@@ -1,0 +1,20 @@
+{
+  "name": "muslly-project-tools",
+  "interface": {
+    "displayName": "MUSLLY Project Tools"
+  },
+  "plugins": [
+    {
+      "name": "portfolio-skills-governance",
+      "source": {
+        "source": "local",
+        "path": "./plugins/portfolio-skills-governance"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
