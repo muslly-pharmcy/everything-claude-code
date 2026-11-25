@@ -1,0 +1,6 @@
+{
+  "name": "portfolio-skills-governance",
+  "version": "0.1.0",
+  "description": "Select and audit project-specific skills across the GitHub portfolio.",
+  "skills": "./skills/"
+}
